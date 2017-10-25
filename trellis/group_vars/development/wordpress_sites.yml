@@ -1,0 +1,21 @@
+# Documentation: https://roots.io/trellis/docs/local-development-setup/
+# `wordpress_sites` options: https://roots.io/trellis/docs/wordpress-sites
+# Define accompanying passwords/secrets in group_vars/development/vault.yml
+
+wordpress_sites:
+  ifc.edu.br:
+    site_hosts:
+      - canonical: ifc.test
+        redirects:
+          - www.ifc.test
+    local_path: ../site # path targeting local Bedrock site directory (relative to Ansible root)
+    repo: ssh://git@git.fabricadesoftware.ifc.edu.br:1022/yurihs/ifc-dezessete.git
+    site_title: IFC
+    admin_email: admin@ifc.test
+    multisite:
+      enabled: true
+    ssl:
+      enabled: false
+      provider: self-signed
+    cache:
+      enabled: false
