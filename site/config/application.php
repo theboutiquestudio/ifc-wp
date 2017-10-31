@@ -77,8 +77,38 @@ define('DISALLOW_FILE_EDIT', true);
 define('WPLANG', 'pt_BR');
 
 /**
+ * Multisites
+ */
+
+define('WP_ALLOW_MULTISITE', true);
+define('MULTISITE', true);
+define('SUBDOMAIN_INSTALL', true);
+define('DOMAIN_CURRENT_SITE', $_SERVER['HTTP_HOST']);
+define('PATH_CURRENT_SITE', env('PATH_CURRENT_SITE') ?: '/');
+define('SITE_ID_CURRENT_SITE', env('SITE_ID_CURRENT_SITE') ?: 1);
+define('BLOG_ID_CURRENT_SITE', env('BLOG_ID_CURRENT_SITE') ?: 1);
+
+/**
+ * WP Multi Network
+ */
+
+define( 'COOKIEHASH',        md5(env('DOMAIN_CURRENT_SITE')) );
+define( 'COOKIE_DOMAIN',     env('DOMAIN_CURRENT_SITE')      );
+define( 'ADMIN_COOKIE_PATH', '/' );
+define( 'COOKIEPATH',        '/' );
+define( 'SITECOOKIEPATH',    '/' );
+define( 'TEST_COOKIE',        'wordpress_test_cookie' );
+define( 'AUTH_COOKIE',        'wordpress_'          . COOKIEHASH );
+define( 'USER_COOKIE',        'wordpress_user_'     . COOKIEHASH );
+define( 'PASS_COOKIE',        'wordpress_pass_'     . COOKIEHASH );
+define( 'SECURE_AUTH_COOKIE', 'wordpress_sec_'      . COOKIEHASH );
+define( 'LOGGED_IN_COOKIE',   'wordpress_logged_in' . COOKIEHASH );
+
+
+/**
  * Bootstrap WordPress
  */
 if (!defined('ABSPATH')) {
     define('ABSPATH', $webroot_dir . '/wp/');
 }
+
