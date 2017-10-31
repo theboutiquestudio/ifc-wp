@@ -12,7 +12,7 @@ const rootPath = (userConfig.paths && userConfig.paths.root)
   : process.cwd();
 
 const config = merge({
-  open: true,
+  open: false,
   copy: 'images/**/*',
   proxyUrl: 'http://localhost:3000',
   cacheBusting: '[name]_[hash]',
