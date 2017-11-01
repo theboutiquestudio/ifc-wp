@@ -61,15 +61,16 @@
   when: item.value.site_install | default(true)
   changed_when: "'WordPress is already installed.' not in wp_install.stdout and 'The network already exists.' not in wp_install.stdout"
 
-- name: Setup Permalink Structure
-  command: wp rewrite structure {{ item.item.value.initial_permalink_structure | default("/%postname%/") }} --allow-root
-  args:
-    chdir: "{{ www_root }}/{{ item.item.key }}/{{ item.item.value.current_path | default('current') }}/"
-  with_items: "{{ wp_install.results }}"
-  when: item | changed
+## Commented out, broken when using WP Multi Network
+# - name: Setup Permalink Structure
+#   command: wp rewrite structure {{ item.item.value.initial_permalink_structure | default("/%postname%/") }} --allow-root
+#   args:
+#     chdir: "{{ www_root }}/{{ item.item.key }}/{{ item.item.value.current_path | default('current') }}/"
+#   with_items: "{{ wp_install.results }}"
+#   when: item | changed
 
 - name: Update WP Multisite Home URL
-  command: wp option update home {{ site_env.wp_home }} --allow-root
+  command: wp --url="{{ site_env.wp_home }}" option update home {{ site_env.wp_home }} --allow-root
   args:
     chdir: "{{ www_root }}/{{ item.key }}/{{ item.value.current_path | default('current') }}/"
   with_dict: "{{ wordpress_sites }}"
