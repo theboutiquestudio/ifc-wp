@@ -128,3 +128,23 @@ add_action('after_setup_theme', function () {
         return "<?= " . __NAMESPACE__ . "\\asset_path({$asset}); ?>";
     });
 });
+
+/**
+ * "Whoops" for debugging
+ */
+
+function registerWhoops() {
+    $whoops = new \Whoops\Run;
+    $whoops->pushHandler(new \Whoops\Handler\PrettyPageHandler);
+    $whoops->register();
+}
+if( WP_DEBUG ) registerWhoops();
+
+
+/**
+ * Fix path to controllers
+ */
+
+add_filter('sober/controller/path', function () {
+    return get_stylesheet_directory() . '/controllers';
+});
