@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "843f486efb52a826d2939ddf1f39f2cb",
+    "content-hash": "4ac60f0352df5b5af3b8611830d60332",
     "packages": [
         {
             "name": "composer/installers",
@@ -294,6 +294,17 @@
             "time": "2017-07-17T20:41:59+00:00"
         },
         {
+            "name": "portal-ifc-2017/tema",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "ssh://git@git.fabricadesoftware.ifc.edu.br:1022/portal-ifc-2017/tema.git",
+                "reference": "master"
+            },
+            "type": "package",
+            "time": "2017-11-07T16:19:30+00:00"
+        },
+        {
             "name": "roots/wp-password-bcrypt",
             "version": "1.0.0",
             "source": {
@@ -510,7 +521,8 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "stuttter/wp-multi-network": 20
+        "stuttter/wp-multi-network": 20,
+        "portal-ifc-2017/tema": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
