@@ -31,6 +31,19 @@
       "type": "composer",
       "url": "https://wpackagist.org"
     }
+    {
+      "type": "package",
+      "package": {
+        "name": "portal-ifc-2017/tema",
+        "version": "dev-master",
+        "type": "package",
+        "source": {
+          "url": "ssh://git@git.fabricadesoftware.ifc.edu.br:1022/portal-ifc-2017/tema.git",
+          "type": "git",
+          "reference": "master"
+        }
+      }
+    }
   ],
   "require": {
     "php": ">=5.6",
@@ -39,7 +52,8 @@
     "johnpbloch/wordpress": "4.8.3",
     "oscarotero/env": "^1.1.0",
     "roots/wp-password-bcrypt": "1.0.0",
-    "stuttter/wp-multi-network": "dev-master"
+    "stuttter/wp-multi-network": "dev-master",
+    "portal-ifc-2017/tema": "dev-master"
   },
   "require-dev": {
     "wpackagist-plugin/fakerpress": "^0.4.9",
