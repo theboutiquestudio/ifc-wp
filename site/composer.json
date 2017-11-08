@@ -36,7 +36,7 @@
       "package": {
         "name": "portal-ifc-2017/tema",
         "version": "dev-master",
-        "type": "package",
+        "type": "wordpress-theme",
         "source": {
           "url": "ssh://git@git.fabricadesoftware.ifc.edu.br:1022/portal-ifc-2017/tema.git",
           "type": "git",
@@ -63,6 +63,7 @@
     "installer-paths": {
       "web/app/mu-plugins/{$name}/": ["type:wordpress-muplugin", "stuttter/wp-multi-network"],
       "web/app/plugins/{$name}/": ["type:wordpress-plugin"],
+      "web/app/themes/ifc-v2/": ["portal-ifc-2017/tema"],
       "web/app/themes/{$name}/": ["type:wordpress-theme"]
     },
     "wordpress-install-dir": "web/wp"
