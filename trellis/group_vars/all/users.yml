@@ -13,7 +13,8 @@ users:
     groups:
       - sudo
     keys:
-      - http://git.fabricadesoftware.ifc.edu.br/yurihs.keys
+      - "{{ lookup('file', '~/.ssh/id_spiderman.pub') }}"
+      # - http://git.fabricadesoftware.ifc.edu.br/yurihs.keys
 
 web_user: web
 web_group: www-data
