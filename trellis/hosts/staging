@@ -2,7 +2,7 @@
 # List each machine only once per [group], even if it will host multiple sites.
 
 [staging]
-spiderman.fabricadesoftware.ifc.edu.br
+ironman.fabricadesoftware.ifc.edu.br:1022
 
 [web]
-spiderman.fabricadesoftware.ifc.edu.br
+ironman.fabricadesoftware.ifc.edu.br:1022
