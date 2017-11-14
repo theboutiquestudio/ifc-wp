@@ -82,7 +82,13 @@ define('DISALLOW_FILE_EDIT', true);
 define('WP_ALLOW_MULTISITE', true);
 define('MULTISITE', true);
 define('SUBDOMAIN_INSTALL', true);
-define('DOMAIN_CURRENT_SITE', $_SERVER['HTTP_HOST']);
+
+if (array_key_exists('HTTP_HOST', $_SERVER)){
+    define('DOMAIN_CURRENT_SITE', $_SERVER['HTTP_HOST']);
+} else{
+    define('DOMAIN_CURRENT_SITE', env('DOMAIN_CURRENT_SITE'));
+}
+
 define('PATH_CURRENT_SITE', env('PATH_CURRENT_SITE') ?: '/');
 define('SITE_ID_CURRENT_SITE', env('SITE_ID_CURRENT_SITE') ?: 1);
 define('BLOG_ID_CURRENT_SITE', env('BLOG_ID_CURRENT_SITE') ?: 1);
