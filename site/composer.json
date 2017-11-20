@@ -39,7 +39,8 @@
         "type": "wordpress-theme",
         "source": {
           "url": "ssh://git@git.fabricadesoftware.ifc.edu.br:1022/portal-ifc-2017/tema.git",
-          "type": "git",
+          "type": "vcs",
+          "no-api": true,
           "reference": "master"
         }
       }
