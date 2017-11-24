@@ -302,7 +302,7 @@
                 "reference": "master"
             },
             "type": "wordpress-theme",
-            "time": "2017-11-08T10:28:28+00:00"
+            "time": "2017-11-21T18:07:33+00:00"
         },
         {
             "name": "roots/wp-password-bcrypt",
