@@ -14,7 +14,7 @@ users:
     groups:
       - sudo
     keys:
-      - "{{ lookup('file', '~/.ssh/id_spiderman.pub') }}"
+      - "{{ lookup('file', '~/.ssh/id_ironman.pub') }}"
       # - http://git.fabricadesoftware.ifc.edu.br/yurihs.keys
 
 web_user: web
