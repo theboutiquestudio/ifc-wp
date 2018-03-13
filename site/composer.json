@@ -61,6 +61,7 @@
       "web/app/mu-plugins/{$name}/": ["type:wordpress-muplugin", "stuttter/wp-multi-network"],
       "web/app/plugins/{$name}/": ["type:wordpress-plugin"],
       "web/app/themes/ifc-v2/": ["portal-ifc-2017/tema"],
+      "web/app/themes/noticias-v2/": ["portal-ifc-2017/tema-noticias"],
       "web/app/themes/{$name}/": ["type:wordpress-theme"]
     },
     "wordpress-install-dir": "web/wp"
