@@ -4,6 +4,7 @@
   "license": "MIT",
   "description": "WordPress boilerplate with modern development tools, easier configuration, and an improved folder structure",
   "homepage": "https://roots.io/bedrock/",
+  "minimum-stability": "dev",
   "authors": [
     {
       "name": "Scott Walkinshaw",
@@ -32,11 +33,11 @@
       "url": "https://wpackagist.org"
     },
     {
-      "type": "gitlab",
+      "type": "vcs",
       "url": "ssh://git@git.fabricadesoftware.ifc.edu.br:1022/portal-ifc-2017/tema.git"
     },
     {
-      "type": "gitlab",
+      "type": "vcs",
       "url": "ssh://git@git.fabricadesoftware.ifc.edu.br:1022/portal-ifc-2017/tema-noticias.git"
     }
   ],

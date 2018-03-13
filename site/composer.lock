@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "caf8695821f8b880d8c04832af759e11",
+    "content-hash": "9d2e15ba4ce2505d9d8d0cb40e29373c",
     "packages": [
         {
             "name": "composer/installers",
@@ -308,6 +308,21 @@
             "time": "2017-11-21T18:07:33+00:00"
         },
         {
+            "name": "portal-ifc-2017/tema-noticias",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "ssh://git@git.fabricadesoftware.ifc.edu.br:1022/portal-ifc-2017/tema-noticias.git",
+                "reference": "d737511cd0de97c3f744087d2b7ab37e23a118e8"
+            },
+            "require": {
+                "composer/installers": "~1.0",
+                "vladkens/autoprefixer": "dev-master"
+            },
+            "type": "wordpress-theme",
+            "time": "2018-03-13T18:44:36+00:00"
+        },
+        {
             "name": "roots/wp-password-bcrypt",
             "version": "1.0.0",
             "source": {
@@ -396,6 +411,48 @@
             "description": "A Network Management UI for global administrators in WordPress Multisite",
             "homepage": "https://github.com/stuttter/wp-multi-network",
             "time": "2018-02-19T08:04:28+00:00"
+        },
+        {
+            "name": "vladkens/autoprefixer",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/vladkens/autoprefixer-php.git",
+                "reference": "72409e120f2336d0f230627ebf3c8d5f0b99df8b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/vladkens/autoprefixer-php/zipball/72409e120f2336d0f230627ebf3c8d5f0b99df8b",
+                "reference": "72409e120f2336d0f230627ebf3c8d5f0b99df8b",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "": "lib"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Vlad Pronsky",
+                    "email": "vladkens@yandex.ru"
+                }
+            ],
+            "description": "Run Autoprefixer using node.js in you php.",
+            "keywords": [
+                "Node.js",
+                "autoprefixer",
+                "css",
+                "prefixes"
+            ],
+            "time": "2015-06-14T13:40:00+00:00"
         },
         {
             "name": "vlucas/phpdotenv",
@@ -522,10 +579,11 @@
         }
     ],
     "aliases": [],
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "stability-flags": {
         "stuttter/wp-multi-network": 20,
-        "portal-ifc-2017/tema": 20
+        "portal-ifc-2017/tema": 20,
+        "portal-ifc-2017/tema-noticias": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
