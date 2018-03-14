@@ -39,6 +39,10 @@
     {
       "type": "vcs",
       "url": "ssh://git@git.fabricadesoftware.ifc.edu.br:1022/portal-ifc-2017/tema-noticias.git"
+    },
+    {
+      "type": "vcs",
+      "url": "ssh://git@git.fabricadesoftware.ifc.edu.br:1022/portal-ifc-2017/tema-campi.git"
     }
   ],
   "require": {
@@ -50,7 +54,8 @@
     "roots/wp-password-bcrypt": "1.0.0",
     "stuttter/wp-multi-network": "dev-master",
     "portal-ifc-2017/tema": "dev-master",
-    "portal-ifc-2017/tema-noticias": "dev-master"
+    "portal-ifc-2017/tema-noticias": "dev-master",
+    "portal-ifc-2017/tema-campi": "dev-master"
   },
   "require-dev": {
     "wpackagist-plugin/fakerpress": "^0.4.9",

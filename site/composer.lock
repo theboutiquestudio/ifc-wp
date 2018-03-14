@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "9d2e15ba4ce2505d9d8d0cb40e29373c",
+    "content-hash": "b251feda3b4d5c0d440dce6baec4fc82",
     "packages": [
         {
             "name": "composer/installers",
@@ -302,10 +302,29 @@
             "source": {
                 "type": "git",
                 "url": "ssh://git@git.fabricadesoftware.ifc.edu.br:1022/portal-ifc-2017/tema.git",
-                "reference": "master"
+                "reference": "ad512cc67ca779959714a6b092aaac0d520e1634"
+            },
+            "require": {
+                "composer/installers": "~1.0",
+                "vladkens/autoprefixer": "dev-master"
             },
             "type": "wordpress-theme",
-            "time": "2017-11-21T18:07:33+00:00"
+            "time": "2017-11-24T16:29:12+00:00"
+        },
+        {
+            "name": "portal-ifc-2017/tema-campi",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "ssh://git@git.fabricadesoftware.ifc.edu.br:1022/portal-ifc-2017/tema-campi.git",
+                "reference": "b2ceb6d1d0d58d178d7f106128466bbbc09d47d9"
+            },
+            "require": {
+                "composer/installers": "~1.0",
+                "vladkens/autoprefixer": "dev-master"
+            },
+            "type": "wordpress-theme",
+            "time": "2018-03-14T17:08:54+00:00"
         },
         {
             "name": "portal-ifc-2017/tema-noticias",
@@ -456,28 +475,28 @@
         },
         {
             "name": "vlucas/phpdotenv",
-            "version": "v2.4.0",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/vlucas/phpdotenv.git",
-                "reference": "3cc116adbe4b11be5ec557bf1d24dc5e3a21d18c"
+                "reference": "90b2f4112475578eb60269266e79514e1b4128b6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/vlucas/phpdotenv/zipball/3cc116adbe4b11be5ec557bf1d24dc5e3a21d18c",
-                "reference": "3cc116adbe4b11be5ec557bf1d24dc5e3a21d18c",
+                "url": "https://api.github.com/repos/vlucas/phpdotenv/zipball/90b2f4112475578eb60269266e79514e1b4128b6",
+                "reference": "90b2f4112475578eb60269266e79514e1b4128b6",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.9"
             },
             "require-dev": {
-                "phpunit/phpunit": "^4.8 || ^5.0"
+                "phpunit/phpunit": "^4.8.35 || ^5.0"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.4-dev"
+                    "dev-master": "2.5-dev"
                 }
             },
             "autoload": {
@@ -502,22 +521,22 @@
                 "env",
                 "environment"
             ],
-            "time": "2016-09-01T10:05:43+00:00"
+            "time": "2018-01-28T23:08:18+00:00"
         }
     ],
     "packages-dev": [
         {
             "name": "squizlabs/php_codesniffer",
-            "version": "3.2.3",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/squizlabs/PHP_CodeSniffer.git",
-                "reference": "4842476c434e375f9d3182ff7b89059583aa8b27"
+                "reference": "084fc697a0d2daeb4c89df8b3ee4e26fefaea068"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/4842476c434e375f9d3182ff7b89059583aa8b27",
-                "reference": "4842476c434e375f9d3182ff7b89059583aa8b27",
+                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/084fc697a0d2daeb4c89df8b3ee4e26fefaea068",
+                "reference": "084fc697a0d2daeb4c89df8b3ee4e26fefaea068",
                 "shasum": ""
             },
             "require": {
@@ -555,7 +574,7 @@
                 "phpcs",
                 "standards"
             ],
-            "time": "2018-02-20T21:35:23+00:00"
+            "time": "2018-03-12T04:34:57+00:00"
         },
         {
             "name": "wpackagist-plugin/fakerpress",
@@ -583,7 +602,8 @@
     "stability-flags": {
         "stuttter/wp-multi-network": 20,
         "portal-ifc-2017/tema": 20,
-        "portal-ifc-2017/tema-noticias": 20
+        "portal-ifc-2017/tema-noticias": 20,
+        "portal-ifc-2017/tema-campi": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
