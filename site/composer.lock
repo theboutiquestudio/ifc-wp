@@ -317,14 +317,14 @@
             "source": {
                 "type": "git",
                 "url": "ssh://git@git.fabricadesoftware.ifc.edu.br:1022/portal-ifc-2017/tema-campi.git",
-                "reference": "a35cab21f14d780baec5504a44f71f1408702dca"
+                "reference": "66556e623b08f78ccd400c520ddf18c88d0f736e"
             },
             "require": {
                 "composer/installers": "~1.0",
                 "vladkens/autoprefixer": "dev-master"
             },
             "type": "wordpress-theme",
-            "time": "2018-03-14T17:29:47+00:00"
+            "time": "2018-03-15T16:34:07+00:00"
         },
         {
             "name": "portal-ifc-2017/tema-noticias",
@@ -531,12 +531,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/squizlabs/PHP_CodeSniffer.git",
-                "reference": "084fc697a0d2daeb4c89df8b3ee4e26fefaea068"
+                "reference": "048f0300c7207a4907be8479c010941a0e8b3ea2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/084fc697a0d2daeb4c89df8b3ee4e26fefaea068",
-                "reference": "084fc697a0d2daeb4c89df8b3ee4e26fefaea068",
+                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/048f0300c7207a4907be8479c010941a0e8b3ea2",
+                "reference": "048f0300c7207a4907be8479c010941a0e8b3ea2",
                 "shasum": ""
             },
             "require": {
@@ -574,7 +574,7 @@
                 "phpcs",
                 "standards"
             ],
-            "time": "2018-03-12T04:34:57+00:00"
+            "time": "2018-03-15T05:15:45+00:00"
         },
         {
             "name": "wpackagist-plugin/fakerpress",
