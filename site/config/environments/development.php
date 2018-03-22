@@ -1,7 +1,7 @@
 <?php
 /** Development */
-define('SAVEQUERIES', true);
-define('WP_DEBUG', true);
+define('SAVEQUERIES', false);
+define('WP_DEBUG', false);
 define('SCRIPT_DEBUG', true);
 
 //Fix cookies (login wasn't working)
@@ -9,5 +9,7 @@ define('SCRIPT_DEBUG', true);
 
 // Too many errors! Don't show 'em, just log 'em.
 define('WP_DEBUG_DISPLAY', false);
-define('WP_DEBUG_LOG', true);
+define('WP_DEBUG_LOG', false);
+
+@ini_set('display_errors', 0);
 
