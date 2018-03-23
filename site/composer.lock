@@ -317,14 +317,14 @@
             "source": {
                 "type": "git",
                 "url": "ssh://git@git.fabricadesoftware.ifc.edu.br:1022/portal-ifc-2017/tema-campi.git",
-                "reference": "94d8755bdcb032b74df7d84a27639e820d042584"
+                "reference": "29fb4735d63534712221fe7c3934d22524b0d029"
             },
             "require": {
                 "composer/installers": "~1.0",
                 "vladkens/autoprefixer": "dev-master"
             },
             "type": "wordpress-theme",
-            "time": "2018-03-15T18:08:54+00:00"
+            "time": "2018-03-23T19:03:07+00:00"
         },
         {
             "name": "portal-ifc-2017/tema-noticias",
@@ -479,12 +479,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/vlucas/phpdotenv.git",
-                "reference": "90b2f4112475578eb60269266e79514e1b4128b6"
+                "reference": "fe2a5c22c94949983be10263417f47f8551d5946"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/vlucas/phpdotenv/zipball/90b2f4112475578eb60269266e79514e1b4128b6",
-                "reference": "90b2f4112475578eb60269266e79514e1b4128b6",
+                "url": "https://api.github.com/repos/vlucas/phpdotenv/zipball/fe2a5c22c94949983be10263417f47f8551d5946",
+                "reference": "fe2a5c22c94949983be10263417f47f8551d5946",
                 "shasum": ""
             },
             "require": {
@@ -506,7 +506,7 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "BSD-3-Clause-Attribution"
+                "BSD-3-Clause"
             ],
             "authors": [
                 {
@@ -521,7 +521,7 @@
                 "env",
                 "environment"
             ],
-            "time": "2018-01-28T23:08:18+00:00"
+            "time": "2018-03-19T21:27:48+00:00"
         }
     ],
     "packages-dev": [
@@ -531,12 +531,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/squizlabs/PHP_CodeSniffer.git",
-                "reference": "048f0300c7207a4907be8479c010941a0e8b3ea2"
+                "reference": "fdc4698d2314668caccf21a1cfd63e8e415a9275"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/048f0300c7207a4907be8479c010941a0e8b3ea2",
-                "reference": "048f0300c7207a4907be8479c010941a0e8b3ea2",
+                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/fdc4698d2314668caccf21a1cfd63e8e415a9275",
+                "reference": "fdc4698d2314668caccf21a1cfd63e8e415a9275",
                 "shasum": ""
             },
             "require": {
@@ -574,7 +574,7 @@
                 "phpcs",
                 "standards"
             ],
-            "time": "2018-03-15T05:15:45+00:00"
+            "time": "2018-03-23T03:38:59+00:00"
         },
         {
             "name": "wpackagist-plugin/fakerpress",
