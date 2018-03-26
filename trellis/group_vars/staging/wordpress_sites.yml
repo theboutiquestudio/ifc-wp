@@ -10,10 +10,10 @@ wordpress_sites:
           - www.website.fabricadesoftware.ifc.edu.br
     local_path: ../site # path targeting local Bedrock site directory (relative to Ansible root)
     repo: ssh://git@git.fabricadesoftware.ifc.edu.br:1022/yurihs/ifc-dezessete.git
+    branch: master
     repo_subtree_path: site # relative path to your Bedrock/WP directory in your repo
     site_title: IFC
     admin_email: admin@ifc.test
-    branch: tema-antigo
     multisite:
       enabled: true
       subdomains: true
