@@ -317,14 +317,14 @@
             "source": {
                 "type": "git",
                 "url": "ssh://git@git.fabricadesoftware.ifc.edu.br:1022/portal-ifc-2017/tema-campi.git",
-                "reference": "29fb4735d63534712221fe7c3934d22524b0d029"
+                "reference": "b88ceb93934c57a246563fd28f179d45d6226cae"
             },
             "require": {
                 "composer/installers": "~1.0",
                 "vladkens/autoprefixer": "dev-master"
             },
             "type": "wordpress-theme",
-            "time": "2018-03-23T19:03:07+00:00"
+            "time": "2018-03-26T17:08:45+00:00"
         },
         {
             "name": "portal-ifc-2017/tema-noticias",
@@ -332,14 +332,14 @@
             "source": {
                 "type": "git",
                 "url": "ssh://git@git.fabricadesoftware.ifc.edu.br:1022/portal-ifc-2017/tema-noticias.git",
-                "reference": "61d02f7e75ab3a641dd7af1a75540b32409111cd"
+                "reference": "59fa37a85aa308033f71f4c96b98be5467369131"
             },
             "require": {
                 "composer/installers": "~1.0",
                 "vladkens/autoprefixer": "dev-master"
             },
             "type": "wordpress-theme",
-            "time": "2018-03-26T16:52:33+00:00"
+            "time": "2018-03-26T17:01:13+00:00"
         },
         {
             "name": "roots/wp-password-bcrypt",
