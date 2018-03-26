@@ -4,6 +4,7 @@
   "license": "MIT",
   "description": "WordPress boilerplate with modern development tools, easier configuration, and an improved folder structure",
   "homepage": "https://roots.io/bedrock/",
+  "minimum-stability": "dev",
   "authors": [
     {
       "name": "Scott Walkinshaw",
@@ -30,16 +31,31 @@
     {
       "type": "composer",
       "url": "https://wpackagist.org"
+    },
+    {
+      "type": "vcs",
+      "url": "ssh://git@git.fabricadesoftware.ifc.edu.br:1022/portal-ifc-2017/tema.git"
+    },
+    {
+      "type": "vcs",
+      "url": "ssh://git@git.fabricadesoftware.ifc.edu.br:1022/portal-ifc-2017/tema-noticias.git"
+    },
+    {
+      "type": "vcs",
+      "url": "ssh://git@git.fabricadesoftware.ifc.edu.br:1022/portal-ifc-2017/tema-campi.git"
     }
   ],
   "require": {
     "php": ">=5.6",
     "composer/installers": "^1.4",
     "vlucas/phpdotenv": "^2.0.1",
-    "johnpbloch/wordpress": "4.8.3",
+    "johnpbloch/wordpress": "4.9.4",
     "oscarotero/env": "^1.1.0",
     "roots/wp-password-bcrypt": "1.0.0",
-    "stuttter/wp-multi-network": "dev-master"
+    "stuttter/wp-multi-network": "dev-master",
+    "portal-ifc-2017/tema": "dev-master",
+    "portal-ifc-2017/tema-noticias": "dev-master",
+    "portal-ifc-2017/tema-campi": "dev-master"
   },
   "require-dev": {
     "wpackagist-plugin/fakerpress": "^0.4.9",
@@ -49,6 +65,8 @@
     "installer-paths": {
       "web/app/mu-plugins/{$name}/": ["type:wordpress-muplugin", "stuttter/wp-multi-network"],
       "web/app/plugins/{$name}/": ["type:wordpress-plugin"],
+      "web/app/themes/ifc-v2/": ["portal-ifc-2017/tema"],
+      "web/app/themes/noticias-v2/": ["portal-ifc-2017/tema-noticias"],
       "web/app/themes/{$name}/": ["type:wordpress-theme"]
     },
     "wordpress-install-dir": "web/wp"

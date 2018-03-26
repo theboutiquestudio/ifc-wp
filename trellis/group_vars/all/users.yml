@@ -1,5 +1,5 @@
 # Documentation: https://roots.io/trellis/docs/ssh-keys/
-admin_user: admin
+admin_user: projeto
 
 # Also define 'vault_users' (`group_vars/staging/vault.yml`, `group_vars/production/vault.yml`)
 users:
@@ -9,11 +9,13 @@ users:
     keys:
       # - "{{ lookup('file', '~/.ssh/id_rsa.pub') }}"
       - http://git.fabricadesoftware.ifc.edu.br/yurihs.keys
+      - http://git.fabricadesoftware.ifc.edu.br/Marcos.keys
   - name: "{{ admin_user }}"
     groups:
       - sudo
     keys:
-      - http://git.fabricadesoftware.ifc.edu.br/yurihs.keys
+      - "{{ lookup('file', '~/.ssh/id_ironman.pub') }}"
+      # - http://git.fabricadesoftware.ifc.edu.br/yurihs.keys
 
 web_user: web
 web_group: www-data

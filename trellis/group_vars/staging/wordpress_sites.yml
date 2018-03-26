@@ -3,19 +3,22 @@
 # Define accompanying passwords/secrets in group_vars/staging/vault.yml
 
 wordpress_sites:
-  example.com:
+  ifc.edu.br:
     site_hosts:
-      - canonical: staging.example.com
-        # redirects:
-        #   - otherdomain.com
+      - canonical: website.fabricadesoftware.ifc.edu.br
+        redirects:
+          - www.website.fabricadesoftware.ifc.edu.br
     local_path: ../site # path targeting local Bedrock site directory (relative to Ansible root)
-    repo: git@github.com:example/example.com.git # replace with your Git repo URL
+    repo: ssh://git@git.fabricadesoftware.ifc.edu.br:1022/yurihs/ifc-dezessete.git
     repo_subtree_path: site # relative path to your Bedrock/WP directory in your repo
-    branch: master
+    site_title: IFC
+    admin_email: admin@ifc.test
+    branch: tema-antigo
     multisite:
-      enabled: false
+      enabled: true
+      subdomains: true
     ssl:
       enabled: false
-      provider: letsencrypt
+      provider: self-signed
     cache:
-      enabled: false
+      enabled: true
