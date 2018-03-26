@@ -332,14 +332,14 @@
             "source": {
                 "type": "git",
                 "url": "ssh://git@git.fabricadesoftware.ifc.edu.br:1022/portal-ifc-2017/tema-noticias.git",
-                "reference": "d737511cd0de97c3f744087d2b7ab37e23a118e8"
+                "reference": "61d02f7e75ab3a641dd7af1a75540b32409111cd"
             },
             "require": {
                 "composer/installers": "~1.0",
                 "vladkens/autoprefixer": "dev-master"
             },
             "type": "wordpress-theme",
-            "time": "2018-03-13T18:44:36+00:00"
+            "time": "2018-03-26T16:52:33+00:00"
         },
         {
             "name": "roots/wp-password-bcrypt",
