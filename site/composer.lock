@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "b251feda3b4d5c0d440dce6baec4fc82",
+    "content-hash": "2a091764c3b5f92a68eee800a3e99d19",
     "packages": [
         {
             "name": "composer/installers",
@@ -302,14 +302,13 @@
             "source": {
                 "type": "git",
                 "url": "ssh://git@git.fabricadesoftware.ifc.edu.br:1022/portal-ifc-2017/tema.git",
-                "reference": "c8d24e437a10e0be5c57045cb10faf39b6c6035b"
+                "reference": "456e0f6724edc04cad38221d979ee8901d5d4bc3"
             },
             "require": {
-                "composer/installers": "~1.0",
-                "vladkens/autoprefixer": "dev-master"
+                "composer/installers": "~1.0"
             },
             "type": "wordpress-theme",
-            "time": "2018-03-26T15:53:56+00:00"
+            "time": "2018-03-27T18:30:40+00:00"
         },
         {
             "name": "portal-ifc-2017/tema-campi",
@@ -317,14 +316,13 @@
             "source": {
                 "type": "git",
                 "url": "ssh://git@git.fabricadesoftware.ifc.edu.br:1022/portal-ifc-2017/tema-campi.git",
-                "reference": "b88ceb93934c57a246563fd28f179d45d6226cae"
+                "reference": "8d7f98b37859cd5621a8dc3cf605b23727d75720"
             },
             "require": {
-                "composer/installers": "~1.0",
-                "vladkens/autoprefixer": "dev-master"
+                "composer/installers": "~1.0"
             },
             "type": "wordpress-theme",
-            "time": "2018-03-26T17:08:45+00:00"
+            "time": "2018-03-27T18:24:30+00:00"
         },
         {
             "name": "portal-ifc-2017/tema-noticias",
@@ -332,14 +330,13 @@
             "source": {
                 "type": "git",
                 "url": "ssh://git@git.fabricadesoftware.ifc.edu.br:1022/portal-ifc-2017/tema-noticias.git",
-                "reference": "59fa37a85aa308033f71f4c96b98be5467369131"
+                "reference": "d2be484bdc3ac14806c4bf747580aeb9b3ff69df"
             },
             "require": {
-                "composer/installers": "~1.0",
-                "vladkens/autoprefixer": "dev-master"
+                "composer/installers": "~1.0"
             },
             "type": "wordpress-theme",
-            "time": "2018-03-26T17:01:13+00:00"
+            "time": "2018-03-27T18:29:31+00:00"
         },
         {
             "name": "roots/wp-password-bcrypt",
@@ -432,71 +429,29 @@
             "time": "2018-02-19T08:04:28+00:00"
         },
         {
-            "name": "vladkens/autoprefixer",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/vladkens/autoprefixer-php.git",
-                "reference": "72409e120f2336d0f230627ebf3c8d5f0b99df8b"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/vladkens/autoprefixer-php/zipball/72409e120f2336d0f230627ebf3c8d5f0b99df8b",
-                "reference": "72409e120f2336d0f230627ebf3c8d5f0b99df8b",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-0": {
-                    "": "lib"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Vlad Pronsky",
-                    "email": "vladkens@yandex.ru"
-                }
-            ],
-            "description": "Run Autoprefixer using node.js in you php.",
-            "keywords": [
-                "Node.js",
-                "autoprefixer",
-                "css",
-                "prefixes"
-            ],
-            "time": "2015-06-14T13:40:00+00:00"
-        },
-        {
             "name": "vlucas/phpdotenv",
-            "version": "dev-master",
+            "version": "v2.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/vlucas/phpdotenv.git",
-                "reference": "fe2a5c22c94949983be10263417f47f8551d5946"
+                "reference": "3cc116adbe4b11be5ec557bf1d24dc5e3a21d18c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/vlucas/phpdotenv/zipball/fe2a5c22c94949983be10263417f47f8551d5946",
-                "reference": "fe2a5c22c94949983be10263417f47f8551d5946",
+                "url": "https://api.github.com/repos/vlucas/phpdotenv/zipball/3cc116adbe4b11be5ec557bf1d24dc5e3a21d18c",
+                "reference": "3cc116adbe4b11be5ec557bf1d24dc5e3a21d18c",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.9"
             },
             "require-dev": {
-                "phpunit/phpunit": "^4.8.35 || ^5.0"
+                "phpunit/phpunit": "^4.8 || ^5.0"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.5-dev"
+                    "dev-master": "2.4-dev"
                 }
             },
             "autoload": {
@@ -506,7 +461,7 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "BSD-3-Clause"
+                "BSD-3-Clause-Attribution"
             ],
             "authors": [
                 {
@@ -521,22 +476,22 @@
                 "env",
                 "environment"
             ],
-            "time": "2018-03-19T21:27:48+00:00"
+            "time": "2016-09-01T10:05:43+00:00"
         }
     ],
     "packages-dev": [
         {
             "name": "squizlabs/php_codesniffer",
-            "version": "dev-master",
+            "version": "3.2.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/squizlabs/PHP_CodeSniffer.git",
-                "reference": "9421d7c120b357fd823188019d003666c5a2d58d"
+                "reference": "4842476c434e375f9d3182ff7b89059583aa8b27"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/9421d7c120b357fd823188019d003666c5a2d58d",
-                "reference": "9421d7c120b357fd823188019d003666c5a2d58d",
+                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/4842476c434e375f9d3182ff7b89059583aa8b27",
+                "reference": "4842476c434e375f9d3182ff7b89059583aa8b27",
                 "shasum": ""
             },
             "require": {
@@ -574,7 +529,7 @@
                 "phpcs",
                 "standards"
             ],
-            "time": "2018-03-26T03:04:46+00:00"
+            "time": "2018-02-20T21:35:23+00:00"
         },
         {
             "name": "wpackagist-plugin/fakerpress",
@@ -598,7 +553,7 @@
         }
     ],
     "aliases": [],
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "stability-flags": {
         "stuttter/wp-multi-network": 20,
         "portal-ifc-2017/tema": 20,
