@@ -39,6 +39,8 @@
     no_dev: no
     optimize_autoloader: no
     working_dir: "{{ www_root }}/{{ item.key }}/{{ item.value.current_path | default('current') }}/"
+  environment:
+    COMPOSER: composer-dev.json
   become: no
   with_dict: "{{ wordpress_sites }}"
 
