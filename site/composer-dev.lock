@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "2a091764c3b5f92a68eee800a3e99d19",
+    "content-hash": "afcc6578c0d3a52a8a330d0789fb98d6",
     "packages": [
         {
             "name": "composer/installers",
@@ -298,7 +298,7 @@
         },
         {
             "name": "portal-ifc-2017/tema",
-            "version": "dev-master",
+            "version": "dev-develop",
             "source": {
                 "type": "git",
                 "url": "ssh://git@git.fabricadesoftware.ifc.edu.br:1022/portal-ifc-2017/tema.git",
@@ -312,21 +312,21 @@
         },
         {
             "name": "portal-ifc-2017/tema-campi",
-            "version": "dev-master",
+            "version": "dev-develop",
             "source": {
                 "type": "git",
                 "url": "ssh://git@git.fabricadesoftware.ifc.edu.br:1022/portal-ifc-2017/tema-campi.git",
-                "reference": "8d7f98b37859cd5621a8dc3cf605b23727d75720"
+                "reference": "1625e5c7c14030de1c3c1f9adc74061ce59b692e"
             },
             "require": {
                 "composer/installers": "~1.0"
             },
             "type": "wordpress-theme",
-            "time": "2018-03-27T18:24:30+00:00"
+            "time": "2018-03-26T18:19:45+00:00"
         },
         {
             "name": "portal-ifc-2017/tema-noticias",
-            "version": "dev-master",
+            "version": "dev-develop",
             "source": {
                 "type": "git",
                 "url": "ssh://git@git.fabricadesoftware.ifc.edu.br:1022/portal-ifc-2017/tema-noticias.git",

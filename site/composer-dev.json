@@ -52,9 +52,9 @@
     "oscarotero/env": "^1.1.0",
     "roots/wp-password-bcrypt": "1.0.0",
     "stuttter/wp-multi-network": "dev-master",
-    "portal-ifc-2017/tema": "dev-develop",
-    "portal-ifc-2017/tema-noticias": "dev-develop",
-    "portal-ifc-2017/tema-campi": "dev-develop"
+    "portal-ifc-2017/tema": "dev-develop@dev",
+    "portal-ifc-2017/tema-noticias": "dev-develop@dev",
+    "portal-ifc-2017/tema-campi": "dev-develop@dev"
   },
   "require-dev": {
     "wpackagist-plugin/fakerpress": "^0.4.9",
