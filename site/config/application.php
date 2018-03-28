@@ -76,6 +76,7 @@ define('DISABLE_WP_CRON', env('DISABLE_WP_CRON') ?: false);
 define('DISALLOW_FILE_EDIT', true);
 
 /**
+<<<<<<< HEAD
  * Multisites
  */
 
@@ -111,9 +112,10 @@ define( 'LOGGED_IN_COOKIE',   'wordpress_logged_in' . COOKIEHASH );
 
 
 /**
+=======
+>>>>>>> bedrock/master
  * Bootstrap WordPress
  */
 if (!defined('ABSPATH')) {
     define('ABSPATH', $webroot_dir . '/wp/');
 }
-
