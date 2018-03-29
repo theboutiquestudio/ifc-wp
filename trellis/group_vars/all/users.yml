@@ -7,7 +7,7 @@ users:
     groups:
       - "{{ web_group }}"
     keys:
-      # - "{{ lookup('file', '~/.ssh/id_rsa.pub') }}"
+      - "{{ lookup('file', '~/.ssh/id_ironman.pub') }}"
       - http://git.fabricadesoftware.ifc.edu.br/yurihs.keys
       - http://git.fabricadesoftware.ifc.edu.br/Marcos.keys
   - name: "{{ admin_user }}"
