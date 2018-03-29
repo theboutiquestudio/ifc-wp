@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "0a2f56d36299fef090ffabe8c4747e8a",
+    "content-hash": "f3ca2b6a77adf435a23fe6fa2c67bc28",
     "packages": [
         {
             "name": "composer/installers",
@@ -298,17 +298,17 @@
         },
         {
             "name": "portal-ifc-2017/tema",
-            "version": "1.0",
+            "version": "1.0.1",
             "source": {
                 "type": "git",
                 "url": "ssh://git@git.fabricadesoftware.ifc.edu.br:1022/portal-ifc-2017/tema.git",
-                "reference": "456e0f6724edc04cad38221d979ee8901d5d4bc3"
+                "reference": "699d6775f8d4baa27adb0523024fb2be72240af4"
             },
             "require": {
                 "composer/installers": "~1.0"
             },
             "type": "wordpress-theme",
-            "time": "2018-03-27T18:30:40+00:00"
+            "time": "2018-03-29T18:52:17+00:00"
         },
         {
             "name": "portal-ifc-2017/tema-campi",
