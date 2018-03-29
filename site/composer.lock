@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "2a091764c3b5f92a68eee800a3e99d19",
+    "content-hash": "0a2f56d36299fef090ffabe8c4747e8a",
     "packages": [
         {
             "name": "composer/installers",
@@ -298,7 +298,7 @@
         },
         {
             "name": "portal-ifc-2017/tema",
-            "version": "dev-master",
+            "version": "1.0",
             "source": {
                 "type": "git",
                 "url": "ssh://git@git.fabricadesoftware.ifc.edu.br:1022/portal-ifc-2017/tema.git",
@@ -312,7 +312,7 @@
         },
         {
             "name": "portal-ifc-2017/tema-campi",
-            "version": "dev-master",
+            "version": "1.0",
             "source": {
                 "type": "git",
                 "url": "ssh://git@git.fabricadesoftware.ifc.edu.br:1022/portal-ifc-2017/tema-campi.git",
@@ -326,7 +326,7 @@
         },
         {
             "name": "portal-ifc-2017/tema-noticias",
-            "version": "dev-master",
+            "version": "1.0",
             "source": {
                 "type": "git",
                 "url": "ssh://git@git.fabricadesoftware.ifc.edu.br:1022/portal-ifc-2017/tema-noticias.git",
@@ -555,10 +555,7 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "stuttter/wp-multi-network": 20,
-        "portal-ifc-2017/tema": 20,
-        "portal-ifc-2017/tema-noticias": 20,
-        "portal-ifc-2017/tema-campi": 20
+        "stuttter/wp-multi-network": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
