@@ -53,7 +53,7 @@
     "roots/wp-password-bcrypt": "1.0.0",
     "stuttter/wp-multi-network": "dev-master",
     "portal-ifc-2017/tema": "1.0.1",
-    "portal-ifc-2017/tema-noticias": "1.0",
+    "portal-ifc-2017/tema-noticias": "1.1.0",
     "portal-ifc-2017/tema-campi": "1.0"
   },
   "require-dev": {
