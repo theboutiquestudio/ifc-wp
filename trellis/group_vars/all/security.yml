@@ -6,7 +6,7 @@ ferm_input_list:
     dport: [ssh]
     saddr: "{{ ip_whitelist }}"
   - type: dport_limit
-    dport: [ssh]
+    dport: [ssh, 1022]
     seconds: 300
     hits: 20
 
