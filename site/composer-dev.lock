@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "2a091764c3b5f92a68eee800a3e99d19",
+    "content-hash": "ac6066d062a3fe9a32c860951755e6cc",
     "packages": [
         {
             "name": "composer/installers",
@@ -297,6 +297,20 @@
             "time": "2017-07-17T20:41:59+00:00"
         },
         {
+            "name": "portal-ifc-2017/ifc-funcionalidade",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "ssh://git@git.fabricadesoftware.ifc.edu.br:1022/portal-ifc-2017/ifc-funcionalidade.git",
+                "reference": "1c9437674877b8c9d689243bad83398dbee559bb"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-muplugin",
+            "time": "2018-04-10T19:25:06+00:00"
+        },
+        {
             "name": "portal-ifc-2017/tema",
             "version": "dev-master",
             "source": {
@@ -558,7 +572,8 @@
         "stuttter/wp-multi-network": 20,
         "portal-ifc-2017/tema": 20,
         "portal-ifc-2017/tema-noticias": 20,
-        "portal-ifc-2017/tema-campi": 20
+        "portal-ifc-2017/tema-campi": 20,
+        "portal-ifc-2017/ifc-funcionalidade": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
