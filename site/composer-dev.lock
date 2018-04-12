@@ -302,13 +302,13 @@
             "source": {
                 "type": "git",
                 "url": "ssh://git@git.fabricadesoftware.ifc.edu.br:1022/portal-ifc-2017/ifc-funcionalidade.git",
-                "reference": "654beb77f57117cff2fed0cdc4e97eeb7e0f82b2"
+                "reference": "66e9a8121ae6c9ff394e1142eeac20178b303e3b"
             },
             "require": {
                 "composer/installers": "~1.0"
             },
             "type": "wordpress-muplugin",
-            "time": "2018-04-11T19:51:33+00:00"
+            "time": "2018-04-12T19:41:08+00:00"
         },
         {
             "name": "portal-ifc-2017/tema",
