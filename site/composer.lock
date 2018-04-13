@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "9ed659d4d11f33ff1fc43c7df0b0c4ea",
+    "content-hash": "2ad5b82f58accd68763cb2dfb722451c",
     "packages": [
         {
             "name": "composer/installers",
@@ -298,17 +298,17 @@
         },
         {
             "name": "portal-ifc-2017/tema",
-            "version": "1.0.1",
+            "version": "2.0.0",
             "source": {
                 "type": "git",
                 "url": "ssh://git@git.fabricadesoftware.ifc.edu.br:1022/portal-ifc-2017/tema.git",
-                "reference": "699d6775f8d4baa27adb0523024fb2be72240af4"
+                "reference": "42b12d144c05009516b350a42f91d523f3237ee9"
             },
             "require": {
                 "composer/installers": "~1.0"
             },
             "type": "wordpress-theme",
-            "time": "2018-03-29T18:52:17+00:00"
+            "time": "2018-04-13T18:22:18+00:00"
         },
         {
             "name": "portal-ifc-2017/tema-campi",
@@ -323,6 +323,34 @@
             },
             "type": "wordpress-theme",
             "time": "2018-03-27T18:24:30+00:00"
+        },
+        {
+            "name": "portal-ifc-2017/tema-cursos",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "ssh://git@git.fabricadesoftware.ifc.edu.br:1022/portal-ifc-2017/tema-cursos.git",
+                "reference": "b96ffc11d95a3757fe36d50a6abf5552edcc3e6c"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-theme",
+            "time": "2018-04-13T18:28:31+00:00"
+        },
+        {
+            "name": "portal-ifc-2017/tema-departamentos",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "ssh://git@git.fabricadesoftware.ifc.edu.br:1022/portal-ifc-2017/tema-departamentos.git",
+                "reference": "16f08cda9477a50c0e23c34ce2d0af957006b245"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-theme",
+            "time": "2018-04-13T18:30:56+00:00"
         },
         {
             "name": "portal-ifc-2017/tema-noticias",

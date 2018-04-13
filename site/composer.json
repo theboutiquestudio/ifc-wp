@@ -42,6 +42,14 @@
     {
       "type": "vcs",
       "url": "ssh://git@git.fabricadesoftware.ifc.edu.br:1022/portal-ifc-2017/tema-campi.git"
+    },
+    {
+      "type": "vcs",
+      "url": "ssh://git@git.fabricadesoftware.ifc.edu.br:1022/portal-ifc-2017/tema-cursos.git"
+    },
+    {
+      "type": "vcs",
+      "url": "ssh://git@git.fabricadesoftware.ifc.edu.br:1022/portal-ifc-2017/tema-departamentos.git"
     }
   ],
   "require": {
@@ -52,9 +60,11 @@
     "oscarotero/env": "^1.1.0",
     "roots/wp-password-bcrypt": "1.0.0",
     "stuttter/wp-multi-network": "dev-master",
-    "portal-ifc-2017/tema": "1.0.1",
+    "portal-ifc-2017/tema": "2.0.0",
     "portal-ifc-2017/tema-noticias": "1.1.0",
-    "portal-ifc-2017/tema-campi": "1.0"
+    "portal-ifc-2017/tema-campi": "1.0",
+    "portal-ifc-2017/tema-cursos": "1.0.0",
+    "portal-ifc-2017/tema-departamentos": "1.0.0"
   },
   "require-dev": {
     "wpackagist-plugin/fakerpress": "^0.4.9",

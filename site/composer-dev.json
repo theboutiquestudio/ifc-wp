@@ -45,6 +45,14 @@
     },
     {
       "type": "vcs",
+      "url": "ssh://git@git.fabricadesoftware.ifc.edu.br:1022/portal-ifc-2017/tema-cursos.git"
+    },
+    {
+      "type": "vcs",
+      "url": "ssh://git@git.fabricadesoftware.ifc.edu.br:1022/portal-ifc-2017/tema-departamentos.git"
+    },
+    {
+      "type": "vcs",
       "url": "ssh://git@git.fabricadesoftware.ifc.edu.br:1022/portal-ifc-2017/ifc-funcionalidade.git"
     }
   ],
@@ -59,6 +67,8 @@
     "portal-ifc-2017/tema": "dev-master",
     "portal-ifc-2017/tema-noticias": "dev-master",
     "portal-ifc-2017/tema-campi": "dev-master",
+    "portal-ifc-2017/tema-cursos": "dev-master",
+    "portal-ifc-2017/tema-departamentos": "dev-master",
     "portal-ifc-2017/ifc-funcionalidade": "dev-master"
   },
   "require-dev": {
