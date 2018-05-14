@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "d693b7457c4252ea2d46593752de8e82",
+    "content-hash": "5e047c66167316bb9a1ceb420970f0a5",
     "packages": [
         {
             "name": "composer/installers",
@@ -302,13 +302,13 @@
             "source": {
                 "type": "git",
                 "url": "ssh://git@git.fabricadesoftware.ifc.edu.br:1022/portal-ifc-2017/ifc-funcionalidade.git",
-                "reference": "a0fbe01bf7bee83a65d9ec531c3fae95fdc65885"
+                "reference": "910ff26deb570e4f9cc0764bcad1c7274e67cbc7"
             },
             "require": {
                 "composer/installers": "~1.0"
             },
-            "type": "wordpress-muplugin",
-            "time": "2018-04-18T18:59:19+00:00"
+            "type": "wordpress-plugin",
+            "time": "2018-05-11T15:50:16+00:00"
         },
         {
             "name": "portal-ifc-2017/tema",
@@ -316,13 +316,13 @@
             "source": {
                 "type": "git",
                 "url": "ssh://git@git.fabricadesoftware.ifc.edu.br:1022/portal-ifc-2017/tema.git",
-                "reference": "42b12d144c05009516b350a42f91d523f3237ee9"
+                "reference": "c099d2d1507093a9937b9bf590a73f6859179208"
             },
             "require": {
                 "composer/installers": "~1.0"
             },
             "type": "wordpress-theme",
-            "time": "2018-04-13T18:22:18+00:00"
+            "time": "2018-05-08T19:30:21+00:00"
         },
         {
             "name": "portal-ifc-2017/tema-campi",
@@ -330,13 +330,13 @@
             "source": {
                 "type": "git",
                 "url": "ssh://git@git.fabricadesoftware.ifc.edu.br:1022/portal-ifc-2017/tema-campi.git",
-                "reference": "8d7f98b37859cd5621a8dc3cf605b23727d75720"
+                "reference": "064f4cbac57eda3f2eda72a8e668e9cd09916142"
             },
             "require": {
                 "composer/installers": "~1.0"
             },
             "type": "wordpress-theme",
-            "time": "2018-03-27T18:24:30+00:00"
+            "time": "2018-05-03T16:16:35+00:00"
         },
         {
             "name": "portal-ifc-2017/tema-cursos",
@@ -443,12 +443,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/stuttter/wp-multi-network.git",
-                "reference": "6f9cbc9f7038c6387e727557324f04916a7545de"
+                "reference": "503c90c23f4ea52cced6eb183c6b928824e6f12a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/stuttter/wp-multi-network/zipball/6f9cbc9f7038c6387e727557324f04916a7545de",
-                "reference": "6f9cbc9f7038c6387e727557324f04916a7545de",
+                "url": "https://api.github.com/repos/stuttter/wp-multi-network/zipball/503c90c23f4ea52cced6eb183c6b928824e6f12a",
+                "reference": "503c90c23f4ea52cced6eb183c6b928824e6f12a",
                 "shasum": ""
             },
             "require": {
@@ -468,7 +468,7 @@
             ],
             "description": "A Network Management UI for global administrators in WordPress Multisite",
             "homepage": "https://github.com/stuttter/wp-multi-network",
-            "time": "2018-02-19T08:04:28+00:00"
+            "time": "2018-05-11T22:11:04+00:00"
         },
         {
             "name": "vlucas/phpdotenv",
@@ -519,6 +519,46 @@
                 "environment"
             ],
             "time": "2016-09-01T10:05:43+00:00"
+        },
+        {
+            "name": "wpackagist-plugin/wp-embed-facebook",
+            "version": "2.2.3",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/wp-embed-facebook/",
+                "reference": "tags/2.2.3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/wp-embed-facebook.2.2.3.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/wp-embed-facebook/"
+        },
+        {
+            "name": "wpackagist-plugin/wp-instagram-widget",
+            "version": "2.0.3",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/wp-instagram-widget/",
+                "reference": "tags/2.0.3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/wp-instagram-widget.2.0.3.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/wp-instagram-widget/"
         }
     ],
     "packages-dev": [

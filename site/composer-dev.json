@@ -64,6 +64,8 @@
     "oscarotero/env": "^1.1.0",
     "roots/wp-password-bcrypt": "1.0.0",
     "stuttter/wp-multi-network": "dev-master",
+    "wpackagist-plugin/wp-instagram-widget": "^2.0.3",
+    "wpackagist-plugin/wp-embed-facebook": "^2.2.3",
     "portal-ifc-2017/tema": "dev-master",
     "portal-ifc-2017/tema-noticias": "dev-master",
     "portal-ifc-2017/tema-campi": "dev-master",
@@ -77,7 +79,12 @@
   },
   "extra": {
     "installer-paths": {
-      "web/app/mu-plugins/{$name}/": ["type:wordpress-muplugin", "stuttter/wp-multi-network"],
+      "web/app/mu-plugins/{$name}/": [
+        "type:wordpress-muplugin",
+        "stuttter/wp-multi-network",
+        "wpackagist-plugin/wp-instagram-widget",
+        "wpackagist-plugin/wp-embed-facebook"
+      ],
       "web/app/plugins/{$name}/": ["type:wordpress-plugin"],
       "web/app/themes/ifc-v2/": ["portal-ifc-2017/tema"],
       "web/app/themes/noticias-v2/": ["portal-ifc-2017/tema-noticias"],
