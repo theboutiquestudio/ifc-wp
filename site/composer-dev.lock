@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "5e047c66167316bb9a1ceb420970f0a5",
+    "content-hash": "ee0f86930d3b484f3f1ecdf78400e6ad",
     "packages": [
         {
             "name": "composer/installers",
@@ -128,20 +128,20 @@
         },
         {
             "name": "johnpbloch/wordpress",
-            "version": "4.9.5",
+            "version": "4.9.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/johnpbloch/wordpress.git",
-                "reference": "c0d69bde6fc373270766a00db333c64f35496d67"
+                "reference": "ecca35c283591e3f40732522334415521f5aa4b7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/johnpbloch/wordpress/zipball/c0d69bde6fc373270766a00db333c64f35496d67",
-                "reference": "c0d69bde6fc373270766a00db333c64f35496d67",
+                "url": "https://api.github.com/repos/johnpbloch/wordpress/zipball/ecca35c283591e3f40732522334415521f5aa4b7",
+                "reference": "ecca35c283591e3f40732522334415521f5aa4b7",
                 "shasum": ""
             },
             "require": {
-                "johnpbloch/wordpress-core": "4.9.5",
+                "johnpbloch/wordpress-core": "4.9.6",
                 "johnpbloch/wordpress-core-installer": "^1.0",
                 "php": ">=5.3.2"
             },
@@ -163,27 +163,27 @@
                 "cms",
                 "wordpress"
             ],
-            "time": "2018-04-03T22:47:48+00:00"
+            "time": "2018-05-17T20:03:03+00:00"
         },
         {
             "name": "johnpbloch/wordpress-core",
-            "version": "4.9.5",
+            "version": "4.9.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/johnpbloch/wordpress-core.git",
-                "reference": "442ae6c761e3b20cc6a000bee8fefcde5dbab3fa"
+                "reference": "6ff81eb3d93d326b78a8bc0f120e72c161ec58c8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/johnpbloch/wordpress-core/zipball/442ae6c761e3b20cc6a000bee8fefcde5dbab3fa",
-                "reference": "442ae6c761e3b20cc6a000bee8fefcde5dbab3fa",
+                "url": "https://api.github.com/repos/johnpbloch/wordpress-core/zipball/6ff81eb3d93d326b78a8bc0f120e72c161ec58c8",
+                "reference": "6ff81eb3d93d326b78a8bc0f120e72c161ec58c8",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.2"
             },
             "provide": {
-                "wordpress/core-implementation": "4.9.5"
+                "wordpress/core-implementation": "4.9.6"
             },
             "type": "wordpress-core",
             "notification-url": "https://packagist.org/downloads/",
@@ -203,7 +203,7 @@
                 "cms",
                 "wordpress"
             ],
-            "time": "2018-04-03T22:47:40+00:00"
+            "time": "2018-05-17T20:02:55+00:00"
         },
         {
             "name": "johnpbloch/wordpress-core-installer",
@@ -302,13 +302,13 @@
             "source": {
                 "type": "git",
                 "url": "ssh://git@git.fabricadesoftware.ifc.edu.br:1022/portal-ifc-2017/ifc-funcionalidade.git",
-                "reference": "910ff26deb570e4f9cc0764bcad1c7274e67cbc7"
+                "reference": "a469924bbda7e1e4b961fe89490de6681a34b66c"
             },
             "require": {
                 "composer/installers": "~1.0"
             },
             "type": "wordpress-plugin",
-            "time": "2018-05-11T15:50:16+00:00"
+            "time": "2018-05-17T17:02:11+00:00"
         },
         {
             "name": "portal-ifc-2017/tema",
@@ -316,13 +316,13 @@
             "source": {
                 "type": "git",
                 "url": "ssh://git@git.fabricadesoftware.ifc.edu.br:1022/portal-ifc-2017/tema.git",
-                "reference": "c099d2d1507093a9937b9bf590a73f6859179208"
+                "reference": "e3f95ed6334ed25f9ec87f8aed1402a0884bab24"
             },
             "require": {
                 "composer/installers": "~1.0"
             },
             "type": "wordpress-theme",
-            "time": "2018-05-08T19:30:21+00:00"
+            "time": "2018-05-17T16:39:11+00:00"
         },
         {
             "name": "portal-ifc-2017/tema-campi",
@@ -330,13 +330,13 @@
             "source": {
                 "type": "git",
                 "url": "ssh://git@git.fabricadesoftware.ifc.edu.br:1022/portal-ifc-2017/tema-campi.git",
-                "reference": "064f4cbac57eda3f2eda72a8e668e9cd09916142"
+                "reference": "daf51b45c19a8b91bccd5184ee7125e8c98c6c92"
             },
             "require": {
                 "composer/installers": "~1.0"
             },
             "type": "wordpress-theme",
-            "time": "2018-05-03T16:16:35+00:00"
+            "time": "2018-05-17T17:03:47+00:00"
         },
         {
             "name": "portal-ifc-2017/tema-cursos",
@@ -344,13 +344,13 @@
             "source": {
                 "type": "git",
                 "url": "ssh://git@git.fabricadesoftware.ifc.edu.br:1022/portal-ifc-2017/tema-cursos.git",
-                "reference": "b96ffc11d95a3757fe36d50a6abf5552edcc3e6c"
+                "reference": "c1ab6d7ca2635c98a528587db8188f717c24c44f"
             },
             "require": {
                 "composer/installers": "~1.0"
             },
             "type": "wordpress-theme",
-            "time": "2018-04-13T18:28:31+00:00"
+            "time": "2018-05-16T17:18:26+00:00"
         },
         {
             "name": "portal-ifc-2017/tema-departamentos",
@@ -358,13 +358,13 @@
             "source": {
                 "type": "git",
                 "url": "ssh://git@git.fabricadesoftware.ifc.edu.br:1022/portal-ifc-2017/tema-departamentos.git",
-                "reference": "16f08cda9477a50c0e23c34ce2d0af957006b245"
+                "reference": "dfa1aee5c52604d6920bb1c775331ec10ef7bb63"
             },
             "require": {
                 "composer/installers": "~1.0"
             },
             "type": "wordpress-theme",
-            "time": "2018-04-13T18:30:56+00:00"
+            "time": "2018-05-11T19:17:15+00:00"
         },
         {
             "name": "portal-ifc-2017/tema-noticias",
@@ -372,13 +372,13 @@
             "source": {
                 "type": "git",
                 "url": "ssh://git@git.fabricadesoftware.ifc.edu.br:1022/portal-ifc-2017/tema-noticias.git",
-                "reference": "9bc20e4b445156364a4bc1609d6796e26b52d444"
+                "reference": "42f8c0b1966b91d7d012e8684339d1d25ddc499a"
             },
             "require": {
                 "composer/installers": "~1.0"
             },
             "type": "wordpress-theme",
-            "time": "2018-04-04T18:54:19+00:00"
+            "time": "2018-05-09T18:32:14+00:00"
         },
         {
             "name": "roots/wp-password-bcrypt",
@@ -443,12 +443,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/stuttter/wp-multi-network.git",
-                "reference": "503c90c23f4ea52cced6eb183c6b928824e6f12a"
+                "reference": "883727431712523ec9fd5bf83a324ce5d3f62d21"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/stuttter/wp-multi-network/zipball/503c90c23f4ea52cced6eb183c6b928824e6f12a",
-                "reference": "503c90c23f4ea52cced6eb183c6b928824e6f12a",
+                "url": "https://api.github.com/repos/stuttter/wp-multi-network/zipball/883727431712523ec9fd5bf83a324ce5d3f62d21",
+                "reference": "883727431712523ec9fd5bf83a324ce5d3f62d21",
                 "shasum": ""
             },
             "require": {
@@ -468,7 +468,7 @@
             ],
             "description": "A Network Management UI for global administrators in WordPress Multisite",
             "homepage": "https://github.com/stuttter/wp-multi-network",
-            "time": "2018-05-11T22:11:04+00:00"
+            "time": "2018-05-18T01:20:03+00:00"
         },
         {
             "name": "vlucas/phpdotenv",
