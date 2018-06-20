@@ -190,6 +190,7 @@ class IFC_Func_Global implements IFC_iFunc{
 	public static function registrar_menus(){
 		register_nav_menu('Superior', 'Menu principal');
 		register_nav_menu('Acesso Rapido', 'acesso_rapido');
+		register_nav_menu('menu_header' , 'menu header');
 
 	}
 	public static function carregar_scripts_styles(){

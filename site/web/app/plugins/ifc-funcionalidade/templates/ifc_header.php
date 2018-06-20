@@ -76,17 +76,11 @@
 
 		<div class="container">
 			<div class="hidden-xs hidden-sm  ">
-				<ul class="list-inline sub-banner">
-					<li><a href="http://ifc.test/acesso-a-informacao/perguntas-frequentes/" accesskey="1">Perguntas Frequentes</a></li>
-					<li>|</li>
-					<li><a href="http://webmail.ifc.test/" accesskey="2">Webmail </a></li>
-					<li>
-						|
-					</li>
-					<li><a href="#">Acesso aos Sistemas Institucinais</a></li>
-					<li>|</li>
-					<li><a href="#">Contato </a></li>
-				</ul>
+				<?php
+       				wp_nav_menu(array(
+          			'theme_location' => 'menu_header',
+        			));
+      			?>
 			</div>
 		</div><!-- /.col-left -->
 	</div>
