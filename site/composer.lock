@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "6331ea199bbf111bb1c000cbd89395f2",
+    "content-hash": "ee0f86930d3b484f3f1ecdf78400e6ad",
     "packages": [
         {
             "name": "composer/installers",
@@ -297,74 +297,88 @@
             "time": "2017-07-17T20:41:59+00:00"
         },
         {
+            "name": "portal-ifc-2017/ifc-funcionalidade",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "ssh://git@git.fabricadesoftware.ifc.edu.br:1022/portal-ifc-2017/ifc-funcionalidade.git",
+                "reference": "a469924bbda7e1e4b961fe89490de6681a34b66c"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "time": "2018-05-17T17:02:11+00:00"
+        },
+        {
             "name": "portal-ifc-2017/tema",
-            "version": "2.0.0",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "ssh://git@git.fabricadesoftware.ifc.edu.br:1022/portal-ifc-2017/tema.git",
-                "reference": "42b12d144c05009516b350a42f91d523f3237ee9"
+                "reference": "e3f95ed6334ed25f9ec87f8aed1402a0884bab24"
             },
             "require": {
                 "composer/installers": "~1.0"
             },
             "type": "wordpress-theme",
-            "time": "2018-04-13T18:22:18+00:00"
+            "time": "2018-05-17T16:39:11+00:00"
         },
         {
             "name": "portal-ifc-2017/tema-campi",
-            "version": "1.0",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "ssh://git@git.fabricadesoftware.ifc.edu.br:1022/portal-ifc-2017/tema-campi.git",
-                "reference": "8d7f98b37859cd5621a8dc3cf605b23727d75720"
+                "reference": "daf51b45c19a8b91bccd5184ee7125e8c98c6c92"
             },
             "require": {
                 "composer/installers": "~1.0"
             },
             "type": "wordpress-theme",
-            "time": "2018-03-27T18:24:30+00:00"
+            "time": "2018-05-17T17:03:47+00:00"
         },
         {
             "name": "portal-ifc-2017/tema-cursos",
-            "version": "1.0.0",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "ssh://git@git.fabricadesoftware.ifc.edu.br:1022/portal-ifc-2017/tema-cursos.git",
-                "reference": "b96ffc11d95a3757fe36d50a6abf5552edcc3e6c"
+                "reference": "c1ab6d7ca2635c98a528587db8188f717c24c44f"
             },
             "require": {
                 "composer/installers": "~1.0"
             },
             "type": "wordpress-theme",
-            "time": "2018-04-13T18:28:31+00:00"
+            "time": "2018-05-16T17:18:26+00:00"
         },
         {
             "name": "portal-ifc-2017/tema-departamentos",
-            "version": "1.0.0",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "ssh://git@git.fabricadesoftware.ifc.edu.br:1022/portal-ifc-2017/tema-departamentos.git",
-                "reference": "16f08cda9477a50c0e23c34ce2d0af957006b245"
+                "reference": "dfa1aee5c52604d6920bb1c775331ec10ef7bb63"
             },
             "require": {
                 "composer/installers": "~1.0"
             },
             "type": "wordpress-theme",
-            "time": "2018-04-13T18:30:56+00:00"
+            "time": "2018-05-11T19:17:15+00:00"
         },
         {
             "name": "portal-ifc-2017/tema-noticias",
-            "version": "1.1.0",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "ssh://git@git.fabricadesoftware.ifc.edu.br:1022/portal-ifc-2017/tema-noticias.git",
-                "reference": "9bc20e4b445156364a4bc1609d6796e26b52d444"
+                "reference": "42f8c0b1966b91d7d012e8684339d1d25ddc499a"
             },
             "require": {
                 "composer/installers": "~1.0"
             },
             "type": "wordpress-theme",
-            "time": "2018-04-04T18:54:19+00:00"
+            "time": "2018-05-09T18:32:14+00:00"
         },
         {
             "name": "roots/wp-password-bcrypt",
@@ -505,6 +519,46 @@
                 "environment"
             ],
             "time": "2016-09-01T10:05:43+00:00"
+        },
+        {
+            "name": "wpackagist-plugin/wp-embed-facebook",
+            "version": "2.2.3",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/wp-embed-facebook/",
+                "reference": "tags/2.2.3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/wp-embed-facebook.2.2.3.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/wp-embed-facebook/"
+        },
+        {
+            "name": "wpackagist-plugin/wp-instagram-widget",
+            "version": "2.0.3",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/wp-instagram-widget/",
+                "reference": "tags/2.0.3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/wp-instagram-widget.2.0.3.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/wp-instagram-widget/"
         }
     ],
     "packages-dev": [
@@ -583,7 +637,13 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "stuttter/wp-multi-network": 20
+        "stuttter/wp-multi-network": 20,
+        "portal-ifc-2017/tema": 20,
+        "portal-ifc-2017/tema-noticias": 20,
+        "portal-ifc-2017/tema-campi": 20,
+        "portal-ifc-2017/tema-cursos": 20,
+        "portal-ifc-2017/tema-departamentos": 20,
+        "portal-ifc-2017/ifc-funcionalidade": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
