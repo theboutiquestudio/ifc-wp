@@ -29,16 +29,17 @@
           <a href="<?php echo get_post_type_archive_link('noticia_curso'); ?>">Notícias
           </a>
         </h1>
-        <?php 
+        <?php
           IFC_Func_Global::exibir_noticias(IFC_Consulta_Noticias::get_noticias());
         ?>
-      
+
     </section>
     <!-- fim noticia -->
     <!-- post types -->
     <section class="post-types">
       <section class="avisos">
         <h1 class="section-title">Avisos</h1>
+        <?php IFC_Avisos::exibir_avisos(IFC_Consulta_Avisos::get_avisos()); ?>
       </section>
       <section class="eventos">
         <h1 class="section-title">Eventos</h1>
@@ -47,15 +48,15 @@
     <!-- fim post types -->
   </section>
   <!-- fim conteudo -->
-  
+
 
   <!-- menu curso -->
   <section class="menu-curso">
-    <?php     
+    <?php
       wp_nav_menu(array(
         'theme_location' => 'menu_curso',
         'fallback_cb' => false,
-      )); 
+      ));
     ?>
   </section>
   <!-- fim menu curso -->
