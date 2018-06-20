@@ -33,7 +33,7 @@ class IFC_ACF_Evento_Geral extends IFC_ACF{
 						'label' => 'Propagar para todos os campi?',
 						'name' => 'propagar_para_todos_os_campi',
 						'type' => 'true_false',
-						'message' => 'Selecione para propagar para todos os campi'
+						'message' => 'Selecione para propagar para todos os campi',
 						'default_value' => '',
 						'layout' => 'vertical',
 					),
