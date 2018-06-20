@@ -871,8 +871,17 @@ a:hover .destaque_ingresso{
 }
 
 .aluno{
-  background-color: #f5cb5c;
+  background-image: url(../images/sou_aluno.jpg);
+  background-color: rgba(245, 203, 92, 0.4);
+  background-blend-mode: luminosity;
 }
+
+.aluno:hover{
+  background-image: url(../images/sou_aluno.jpg);
+  background-color: rgba(245, 203, 92, 0.7);
+  transition: background 0.3s;
+}
+
 .servidor{
   background-color: #299b7a;
 }
