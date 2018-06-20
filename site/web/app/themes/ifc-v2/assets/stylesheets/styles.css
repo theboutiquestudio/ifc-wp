@@ -883,12 +883,28 @@ a:hover .destaque_ingresso{
 }
 
 .servidor{
-  background-color: #299b7a;
-}
-.comunidade{
-  background-color: #8b2635;
+  background-image: url(../images/sou_professor.jpg);
+  background-color: rgba(41, 155, 122, 0.4);
+  background-blend-mode: luminosity;
 }
 
+.servidor:hover{
+  background-image: url(../images/sou_professor.jpg);
+  background-color: rgba(41, 155, 122, 0.8);
+  transition: background 0.3s;
+}
+
+.comunidade{
+  background-image: url(../images/Comunidade.jpg);
+  background-color: rgba(139, 38, 53, 0.4);
+  background-blend-mode: color-burn;
+}
+
+.comunidade:hover{
+  background-image: url(../images/Comunidade.jpg);
+  background-color: rgba(139, 38, 53, 0.6);
+  transition: background 0.3s;
+}
 
 .ingressante, .aluno, .servidor, .comunidade{
   max-height: 100%;
