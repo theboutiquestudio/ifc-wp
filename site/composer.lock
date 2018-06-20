@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "ee0f86930d3b484f3f1ecdf78400e6ad",
+    "content-hash": "605b1da2bcd8b11da9f55bb18a4b48d3",
     "packages": [
         {
             "name": "composer/installers",
@@ -297,90 +297,6 @@
             "time": "2017-07-17T20:41:59+00:00"
         },
         {
-            "name": "portal-ifc-2017/ifc-funcionalidade",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "ssh://git@git.fabricadesoftware.ifc.edu.br:1022/portal-ifc-2017/ifc-funcionalidade.git",
-                "reference": "a469924bbda7e1e4b961fe89490de6681a34b66c"
-            },
-            "require": {
-                "composer/installers": "~1.0"
-            },
-            "type": "wordpress-plugin",
-            "time": "2018-05-17T17:02:11+00:00"
-        },
-        {
-            "name": "portal-ifc-2017/tema",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "ssh://git@git.fabricadesoftware.ifc.edu.br:1022/portal-ifc-2017/tema.git",
-                "reference": "e3f95ed6334ed25f9ec87f8aed1402a0884bab24"
-            },
-            "require": {
-                "composer/installers": "~1.0"
-            },
-            "type": "wordpress-theme",
-            "time": "2018-05-17T16:39:11+00:00"
-        },
-        {
-            "name": "portal-ifc-2017/tema-campi",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "ssh://git@git.fabricadesoftware.ifc.edu.br:1022/portal-ifc-2017/tema-campi.git",
-                "reference": "daf51b45c19a8b91bccd5184ee7125e8c98c6c92"
-            },
-            "require": {
-                "composer/installers": "~1.0"
-            },
-            "type": "wordpress-theme",
-            "time": "2018-05-17T17:03:47+00:00"
-        },
-        {
-            "name": "portal-ifc-2017/tema-cursos",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "ssh://git@git.fabricadesoftware.ifc.edu.br:1022/portal-ifc-2017/tema-cursos.git",
-                "reference": "c1ab6d7ca2635c98a528587db8188f717c24c44f"
-            },
-            "require": {
-                "composer/installers": "~1.0"
-            },
-            "type": "wordpress-theme",
-            "time": "2018-05-16T17:18:26+00:00"
-        },
-        {
-            "name": "portal-ifc-2017/tema-departamentos",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "ssh://git@git.fabricadesoftware.ifc.edu.br:1022/portal-ifc-2017/tema-departamentos.git",
-                "reference": "dfa1aee5c52604d6920bb1c775331ec10ef7bb63"
-            },
-            "require": {
-                "composer/installers": "~1.0"
-            },
-            "type": "wordpress-theme",
-            "time": "2018-05-11T19:17:15+00:00"
-        },
-        {
-            "name": "portal-ifc-2017/tema-noticias",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "ssh://git@git.fabricadesoftware.ifc.edu.br:1022/portal-ifc-2017/tema-noticias.git",
-                "reference": "42f8c0b1966b91d7d012e8684339d1d25ddc499a"
-            },
-            "require": {
-                "composer/installers": "~1.0"
-            },
-            "type": "wordpress-theme",
-            "time": "2018-05-09T18:32:14+00:00"
-        },
-        {
             "name": "roots/wp-password-bcrypt",
             "version": "1.0.0",
             "source": {
@@ -564,16 +480,16 @@
     "packages-dev": [
         {
             "name": "squizlabs/php_codesniffer",
-            "version": "3.2.3",
+            "version": "3.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/squizlabs/PHP_CodeSniffer.git",
-                "reference": "4842476c434e375f9d3182ff7b89059583aa8b27"
+                "reference": "d86873af43b4aa9d1f39a3601cc0cfcf02b25266"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/4842476c434e375f9d3182ff7b89059583aa8b27",
-                "reference": "4842476c434e375f9d3182ff7b89059583aa8b27",
+                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/d86873af43b4aa9d1f39a3601cc0cfcf02b25266",
+                "reference": "d86873af43b4aa9d1f39a3601cc0cfcf02b25266",
                 "shasum": ""
             },
             "require": {
@@ -611,7 +527,7 @@
                 "phpcs",
                 "standards"
             ],
-            "time": "2018-02-20T21:35:23+00:00"
+            "time": "2018-06-06T23:58:19+00:00"
         },
         {
             "name": "wpackagist-plugin/fakerpress",
@@ -623,7 +539,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/fakerpress.zip?timestamp=1519529457",
+                "url": "https://downloads.wordpress.org/plugin/fakerpress.zip?timestamp=1521872725",
                 "reference": null,
                 "shasum": null
             },
@@ -637,13 +553,7 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "stuttter/wp-multi-network": 20,
-        "portal-ifc-2017/tema": 20,
-        "portal-ifc-2017/tema-noticias": 20,
-        "portal-ifc-2017/tema-campi": 20,
-        "portal-ifc-2017/tema-cursos": 20,
-        "portal-ifc-2017/tema-departamentos": 20,
-        "portal-ifc-2017/ifc-funcionalidade": 20
+        "stuttter/wp-multi-network": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
