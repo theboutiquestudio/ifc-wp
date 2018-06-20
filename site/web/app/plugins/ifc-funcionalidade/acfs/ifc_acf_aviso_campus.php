@@ -11,10 +11,8 @@ class IFC_ACF_Aviso_Campus extends IFC_ACF{
 						'key' => 'acf_aviso_propagar_para_todos_os_cursos',
 						'label' => 'Propagar para todos os cursos?',
 						'name' => 'propagar_para_todos_os_cursos',
-						'type' => 'checkbox',
-						'choices' => array(
-							'propagar_todos' => 'Selecione para propagar para todos os cursos',
-						),
+						'type' => 'true_false',
+						'message' => 'Selecione para propagar para todos os campi',
 						'default_value' => '',
 						'layout' => 'vertical',
 					),

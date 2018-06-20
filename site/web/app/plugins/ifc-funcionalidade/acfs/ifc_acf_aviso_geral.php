@@ -11,10 +11,8 @@ class IFC_ACF_Aviso_Geral extends IFC_ACF{
 						'key' => 'acf_aviso_propagar_para_todos_os_campi',
 						'label' => 'Propagar para todos os campi?',
 						'name' => 'propagar_para_todos_os_campi',
-						'type' => 'checkbox',
-						'choices' => array(
-							'propagar_todos' => 'Selecione para propagar para todos os campi',
-						),
+						'type' => 'true_false',
+						'message' => 'Selecione para propagar para todos os campi',
 						'default_value' => '',
 						'layout' => 'vertical',
 					),
