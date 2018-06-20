@@ -1,0 +1,31 @@
+.noticia-main{
+	display: grid;
+	grid-area: noticia;
+	grid-template-areas: "imagem-noticia conteudo-noticia";
+	grid-template-columns: 120px 1fr;
+	grid-gap: 0.5em;
+	margin-bottom: 1em;
+}
+.conteudo-noticia{
+	grid-area: conteudo-noticia;
+	grid-template-areas: "titulo" "texto-noticia";
+}
+
+.conteudo-noticia a{
+	font-size: 18px;
+}
+
+.noticia-curso img{
+	grid-area: imagem-noticia;
+	margin-bottom: 0.25em;
+}
+
+.titulo-noticia{
+	grid-area: titulo;
+	font-weight: bold;
+}
+
+.conteudo-noticia .texto-noticia{
+	grid-area: texto-noticia;
+	font-size: 15px;
+}

@@ -1,9 +1,14 @@
 # Application
 web/app/plugins/*
 !web/app/plugins/.gitkeep
+!web/app/plugins/ifc-funcionalidade
 web/app/mu-plugins/*/
 web/app/themes/*
 !web/app/themes/.gitkeep
+!web/app/themes/ifc-v2
+!web/app/themes/tema-campi
+!web/app/themes/tema-cursos
+!web/app/themes/tema-departamentos
 web/app/upgrade
 web/app/uploads/*
 !web/app/uploads/.gitkeep

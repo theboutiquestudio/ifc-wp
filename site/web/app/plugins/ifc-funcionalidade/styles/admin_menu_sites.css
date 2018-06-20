@@ -1,0 +1,77 @@
+.sites-ifc-title {
+	display: flex;
+	align-items: center;
+}
+
+.sites-ifc-title span {
+	margin-right: 5px;
+}
+
+.sites-ifc .input-group {
+	margin-bottom: 2em;
+}
+
+.sites-ifc .input-group label {
+	font-weight: bold;
+	display: block;
+	margin-bottom: 0.5em;
+}
+
+.sites-ifc .input-group select {
+	min-width: 20em;
+}
+
+.sites-ifc .box {
+	padding: 2em;
+	background: #fff;
+    border: 1px solid #e5e5e5;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.04);
+}
+
+.sites-ifc .lista {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	max-width: 500px;
+    border: 1px solid #e5e5e5;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.04);
+}
+
+.sites-ifc .lista:empty {
+	border: none;
+	box-shadow: none;
+}
+
+.sites-ifc .titulo-lista {
+	font-weight: bold;
+}
+
+.sites-ifc .lista .item {
+	margin: 0;
+	display: flex;
+	align-items: center;
+	padding: 8px;
+	background: #f9f9f9;
+}
+
+.sites-ifc .lista .item:nth-child(2){
+	background: none;
+}
+
+.sites-ifc .lista .item .nome {
+	display: inline;
+}
+
+.sites-ifc .lista .item .deletar {
+	color: #aa0000;
+	border: none;
+	background: none;
+}
+
+.sites-ifc .lisa .item .deletar:hover {
+	color: #dc3232;
+}
+
+#sites_ifc_spinner {
+	display: none;
+}

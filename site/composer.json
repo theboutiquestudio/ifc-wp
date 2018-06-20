@@ -30,26 +30,6 @@
     {
       "type": "composer",
       "url": "https://wpackagist.org"
-    },
-    {
-      "type": "vcs",
-      "url": "ssh://git@git.fabricadesoftware.ifc.edu.br:1022/portal-ifc-2017/tema.git"
-    },
-    {
-      "type": "vcs",
-      "url": "ssh://git@git.fabricadesoftware.ifc.edu.br:1022/portal-ifc-2017/tema-noticias.git"
-    },
-    {
-      "type": "vcs",
-      "url": "ssh://git@git.fabricadesoftware.ifc.edu.br:1022/portal-ifc-2017/tema-campi.git"
-    },
-    {
-      "type": "vcs",
-      "url": "ssh://git@git.fabricadesoftware.ifc.edu.br:1022/portal-ifc-2017/tema-cursos.git"
-    },
-    {
-      "type": "vcs",
-      "url": "ssh://git@git.fabricadesoftware.ifc.edu.br:1022/portal-ifc-2017/tema-departamentos.git"
     }
   ],
   "require": {
@@ -59,12 +39,7 @@
     "johnpbloch/wordpress": "4.9.6",
     "oscarotero/env": "^1.1.0",
     "roots/wp-password-bcrypt": "1.0.0",
-    "stuttter/wp-multi-network": "dev-master",
-    "portal-ifc-2017/tema": "2.0.0",
-    "portal-ifc-2017/tema-noticias": "1.1.0",
-    "portal-ifc-2017/tema-campi": "1.0",
-    "portal-ifc-2017/tema-cursos": "1.0.0",
-    "portal-ifc-2017/tema-departamentos": "1.0.0"
+    "stuttter/wp-multi-network": "dev-master"
   },
   "require-dev": {
     "wpackagist-plugin/fakerpress": "^0.4.9",
@@ -74,8 +49,6 @@
     "installer-paths": {
       "web/app/mu-plugins/{$name}/": ["type:wordpress-muplugin", "stuttter/wp-multi-network"],
       "web/app/plugins/{$name}/": ["type:wordpress-plugin"],
-      "web/app/themes/ifc-v2/": ["portal-ifc-2017/tema"],
-      "web/app/themes/noticias-v2/": ["portal-ifc-2017/tema-noticias"],
       "web/app/themes/{$name}/": ["type:wordpress-theme"]
     },
     "wordpress-install-dir": "web/wp"

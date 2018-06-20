@@ -1,0 +1,42 @@
+@media screen and (max-width: 990px){
+	.menu-principal{
+    	display: none;
+	}
+}
+
+.menu-principal{
+	grid-area: menu; 
+}
+
+.menu-principal ul{
+	list-style: none;
+	padding: 0;
+}
+
+.menu-principal ul ul li{
+	border-bottom: 0.1em solid #dfdfdf; 
+	margin-bottom: 0.5em;
+	margin-top: 0.25em;
+}
+
+.menu-principal  ul ul li:last-child{
+	border-bottom: 0; 
+}
+
+.menu-principal ul ul ul{
+	padding-left: 1em;
+}
+
+.menu-principal > div > ul > li > a {
+  display: block;
+  padding: 0.5em 1em;
+  border-top: 0.4em #124B1A solid;
+  background: #dfdfdf;
+  color: #124B1A;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.menu-principal > div > ul > li:not(:first-child){
+  margin-top: 1em;
+}
