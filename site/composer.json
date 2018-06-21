@@ -41,7 +41,7 @@
     "roots/wp-password-bcrypt": "1.0.0",
     "stuttter/wp-multi-network": "dev-master",
     "wpackagist-plugin/wp-instagram-widget": "^2.0.3",
-    "wpackagist-plugin/wp-embed-facebook": "^2.2.3"
+    "wpackagist-plugin/wp-embed-facebook": "^2.2.3",
     "wpackagist-plugin/advanced-custom-fields": "^4.4.12"
   },
   "require-dev": {
