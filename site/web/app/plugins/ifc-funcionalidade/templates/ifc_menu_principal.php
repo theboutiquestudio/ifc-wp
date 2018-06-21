@@ -23,11 +23,13 @@
           </ul>
         <?php
       }
+      $classes_menu_nossos_campi = "nossos-campi";
+      if (IFC_Func::get_tipo_site_atual() === 'geral'){
+        $classes_menu_nossos_campi .= " menu-aberto";
+      }
     ?>
 
-      <ul class="nossos-campi" <?php if (IFC_Func::get_tipo_site_atual() == 'geral'): ?>
-        <?php echo 'menu-aberto'; ?>
-      <?php endif ?>>
+      <ul class="<?= $classes_menu_nossos_campi ?> ">
         <li>
           <a>Nossos Campi</a>
           <ul>
