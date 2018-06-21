@@ -8,9 +8,9 @@
   <!-- fim imagem banner -->
   <!-- Inicio menu principal -->
     <?php
-      switch_to_blog(get_main_site_id(get_network(1)->id));
+
       IFC_Func_Global::mostrar_menu_principal();
-      restore_current_blog();
+
     ?>
   <!-- Fim menu principal -->
   <!-- menu CAMPUS -->

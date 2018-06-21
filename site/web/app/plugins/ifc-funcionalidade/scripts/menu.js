@@ -36,7 +36,7 @@ function toggleSubMenu(subMenu){
 }
 
 jQuery(function() {
-  let menu_principal = document.querySelector(".menu-principal ul");
+  let menu_principal = document.querySelector("#menu_principal");
   if (menu_principal !== null) {
     inicializarMenu(menu_principal);
   }
@@ -49,5 +49,15 @@ jQuery(function() {
   let menu_curso = document.querySelector(".menu-curso ul");
   if (menu_curso !== null) {
     inicializarMenu(menu_curso);
+  }
+
+  let menu_nossos_campi = document.querySelector(".nossos-campi");
+  if (menu_nossos_campi !== null) {
+    inicializarMenu(menu_nossos_campi);
+  }
+
+  let menu_nossos_cursos = document.querySelector(".nossos-cursos");
+  if (menu_nossos_cursos !== null) {
+    inicializarMenu(menu_nossos_cursos);
   }
 });
