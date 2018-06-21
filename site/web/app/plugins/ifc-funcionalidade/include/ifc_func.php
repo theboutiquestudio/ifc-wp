@@ -148,4 +148,99 @@ class IFC_Func{
 			return $departamento_row !== null;
 		}
 	}
+
+	public static function get_tipo_site_atual(){
+		static $tipos = array(
+			'geral',
+			'noticias',
+			'campus',
+			'curso',
+			'departamento'
+		);
+		static $cache_tipo;
+
+		if (!isset($cache_tipo)) {
+			$cache_tipo = null;
+			foreach ($tipos as $tipo) {
+				if(self::is_current_site($tipo)){
+					$cache_tipo = $tipo;
+				}
+			}
+		}
+
+		return $cache_tipo;
+	}
+
+	public static function get_id_campus_atual(){
+		global $wpdb;
+		$prefixo = $wpdb->base_prefix . 'ifc_';
+
+		static $cache_id_campus;
+
+		if (!isset($cache_id_campus)) {
+			switch (self::get_tipo_site_atual()) {
+				case 'campus':
+					$cache_id_campus = $wpdb->get_row($wpdb->prepare(
+						"SELECT id FROM {$prefixo}campi WHERE blog_id = %d",
+						get_current_blog_id()
+					))->id;
+					break;
+				case 'curso':
+					$cache_id_campus = $wpdb->get_row($wpdb->prepare(
+						"SELECT campi_id FROM {$prefixo}cursos WHERE blog_id = %d",
+						get_current_blog_id()
+					))->campi_id;
+					break;
+				case 'departamento':
+					$cache_id_campus = $wpdb->get_row($wpdb->prepare(
+						"SELECT campi_id FROM {$prefixo}departamentos WHERE blog_id = %d",
+						get_current_blog_id()
+					))->campi_id;
+					break;
+				default:
+					trigger_error("Tentativa de usar get_id_campus_atual quando o site atual não é um campus, curso, ou departamento", E_USER_ERROR);
+					break;
+			}
+		}
+
+		return $cache_id_campus;
+	}
+
+	public static function get_id_curso_atual(){
+		global $wpdb;
+		$prefixo = $wpdb->base_prefix . 'ifc_';
+
+		static $cache_id_curso;
+
+		if (!isset($cache_id_curso)) {
+			if (self::get_tipo_site_atual() !== 'curso') {
+				trigger_error("Tentativa de usar get_id_curso_atual quando o site atual não é um curso", E_USER_ERROR);
+			}
+			$cache_id_curso = $wpdb->get_row($wpdb->prepare(
+				"SELECT id FROM {$prefixo}cursos WHERE blog_id = %d",
+				get_current_blog_id()
+			))->id;
+		}
+
+		return $cache_id_curso;
+	}
+
+	public static function get_id_departamento_atual(){
+		global $wpdb;
+		$prefixo = $wpdb->base_prefix . 'ifc_';
+
+		static $cache_id_departamento;
+
+		if (!isset($cache_id_departamento)) {
+			if (self::get_tipo_site_atual() !== 'departamento') {
+				trigger_error("Tentativa de usar get_id_departamento_atual quando o site atual não é um departamento", E_USER_ERROR);
+			}
+			$cache_id_departamento = $wpdb->get_row($wpdb->prepare(
+				"SELECT id FROM {$prefixo}departamentos WHERE blog_id = %d",
+				get_current_blog_id()
+			))->id;
+		}
+
+		return $cache_id_departamento;
+	}
 }
