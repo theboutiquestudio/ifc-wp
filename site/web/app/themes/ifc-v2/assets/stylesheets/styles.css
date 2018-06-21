@@ -736,16 +736,16 @@ header .lista-links-acessibilidade li span {
 .main-grid{
   display: grid;
   grid-template-areas: "menu-ingresso menu-perfil menu-perfil menu-perfil"
-                        "menu conteudo conteudo acesso-rapido"
+                        "menu noticia noticia acesso-rapido"
                         "menu avisos agenda eventos"
                         "menu setores setores redessociais";
-  grid-template-columns: 13em 1fr 1fr 17.5em;
+  grid-template-columns: 14em 1fr 1fr 17.5em;
   grid-gap: 3.75em;
   grid-template-rows: 210px;
 }
 @media screen  and (max-width:  990px){
   .main-grid{
-    grid-template-areas: "menu-ingresso" "menu-perfil" "conteudo" "acesso-rapido"  "avisos" "agenda" "eventos" "redessociais" "setores";
+    grid-template-areas: "menu-ingresso" "menu-perfil" "noticia" "acesso-rapido"  "avisos" "agenda" "eventos" "redessociais" "setores";
     grid-template-columns: 1fr;
     grid-row-gap: 1em;
     grid-template-rows: auto;
@@ -765,7 +765,7 @@ header .lista-links-acessibilidade li span {
 
 @media screen and (max-width: 990px) {
   .menu-ingresso  {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 50% 50%;
   }
 }
 .menu-ingresso li a {
@@ -784,6 +784,7 @@ header .lista-links-acessibilidade li span {
 .menu-ingresso li a:hover{
   background-color: #f0f7e8;
   border-top: 0.45em solid #dbebcc;
+  transition: background .3s;
 }
 .menu-ingresso li{
   display: flex;
@@ -933,7 +934,7 @@ a:hover .destaque_ingresso{
 
 /* Notícia Index */
 .noticia-index{
-  grid-area: conteudo;
+  grid-area: noticia;
   grid-column: span 2;
 }
 /* Fim Noticia Index */
