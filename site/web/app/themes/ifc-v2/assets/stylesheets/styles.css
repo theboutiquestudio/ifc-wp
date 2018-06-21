@@ -106,7 +106,7 @@ hr {
 		display: block;
 		margin-top: 3px;
 	}
-	
+
   .page-header .back-link {
     display: block;
 		width: 100%;
@@ -134,12 +134,12 @@ hr {
 	.media-left {
 		display: block;
 	}
-	
+
 	.media-img {
 		width: 100%;
 		margin-bottom: 5px;
 	}
-	
+
 	.media-img img {
 		width: 100%;
 	}
@@ -467,7 +467,7 @@ header .lista-links-acessibilidade li span {
   background-color: #096318;
   box-shadow: 0 0 3px 0 #B6B6B6;
   background-image: linear-gradient(#16912A, #137623 60%);
-  border-radius: 3px; 
+  border-radius: 3px;
 }
 
 .main-menu .droplet .col {
@@ -552,7 +552,7 @@ header .lista-links-acessibilidade li span {
   .main-menu > li > a {
     font-size: 16px;
     padding-right: 12px;
-    padding-left: 9px;  
+    padding-left: 9px;
   }
 }
 
@@ -716,18 +716,18 @@ header .lista-links-acessibilidade li span {
 
 .media .date .year {
   position: absolute;
-  
+
   padding-top: 2px;
   border-top: 1px solid #fff;
-  
+
   top: 20px;
   right: -10px;
-  
+
   line-height: 100%;
-  
+
   font-size: 18px;
   letter-spacing: 3px;
-  
+
 	transform: rotate(-90deg);
 }
 
@@ -735,8 +735,8 @@ header .lista-links-acessibilidade li span {
 /*Ingresso*/
 .main-grid{
   display: grid;
-  grid-template-areas: "menu-ingresso menu-perfil menu-perfil menu-perfil" 
-                        "menu conteudo conteudo acesso-rapido" 
+  grid-template-areas: "menu-ingresso menu-perfil menu-perfil menu-perfil"
+                        "menu conteudo conteudo acesso-rapido"
                         "menu avisos agenda eventos"
                         "menu setores setores redessociais";
   grid-template-columns: 13em 1fr 1fr 17.5em;
@@ -839,6 +839,8 @@ a:hover .destaque_ingresso{
   text-align: center;
   justify-content: center;
   align-items: flex-end;
+  background-size: cover;
+  background-position: center;
 }
 
 
@@ -851,7 +853,7 @@ a:hover .destaque_ingresso{
     display: flex;
 
     justify-content: center;
-    align-items: center; 
+    align-items: center;
     height: 100px;
 
   }
@@ -946,7 +948,7 @@ a:hover .destaque_ingresso{
 .feed h1{
   padding: 0.5em 1em;
   font-size: 15px;
-  font-weight: bold; 
+  font-weight: bold;
 }
 /* Avisos */
 .avisos{
@@ -967,7 +969,7 @@ a:hover .destaque_ingresso{
 /* Fim Feed */
 /*redes socias*/
 .redes-sociais{
-  grid-area: redessociais; 
+  grid-area: redessociais;
 }
 .null-instagram-feed img{
   width: 100%;
@@ -1037,7 +1039,7 @@ a:hover .destaque_ingresso{
 		width: 100%;
 		margin-bottom: 5px;
 	}
-	
+
 	.content-container .row-news-courses .col-news .hot-news .media-img img {
 		width: 100%;
 	}
@@ -1182,12 +1184,12 @@ a:hover .destaque_ingresso{
 	.content-container .row-category.row-category-news .media-left {
 		display: block;
 	}
-	
+
 	.content-container .row-category.row-category-news .media-img {
 		width: 100%;
 		margin-bottom: 5px;
 	}
-	
+
 	.content-container .row-category.row-category-news .media-img img {
 		width: 100%;
 	}
@@ -1258,12 +1260,12 @@ a:hover .destaque_ingresso{
 	.content-container .row-courses .col-news .media-left {
 		display: block;
 	}
-	
+
 	.content-container .row-courses .col-news .media-img {
 		width: 100%;
 		margin-bottom: 5px;
 	}
-	
+
 	.content-container .row-courses .col-news .media-img img {
 		width: 100%;
 	}
@@ -1282,7 +1284,7 @@ ul.courses li .modal-activate {
   font-weight: bold;
   border-radius: 6px;
   background-clip: padding-box;
-	
+
   border: 1px solid #dbdbdb;
   width: 100%;
 
@@ -1383,13 +1385,13 @@ ul.courses li .modal-activate:hover {
 @media only screen and (max-width: 992px) {
 	.content-container .row-news .col-hot-news .media-left {
 		display: block;
-	}	
-	
+	}
+
 	.content-container .row-news .col-hot-news .media-img {
 		width: 100%;
 		margin-bottom: 5px;
 	}
-	
+
 	.content-container .row-news .col-hot-news .media-img img {
 		width: 100%;
 	}
@@ -1426,21 +1428,21 @@ ul.courses li .modal-activate:hover {
 .cecom .buttons a {
 	-moz-user-select: none;
 	background-image: none;
-	
+
 	border-radius: 4px;
 	cursor: pointer;
 	display: inline-block;
-	
+
 	font-weight: 400;
 	line-height: 1.42857;
 	margin-bottom: 0;
-	
+
 	text-align: center;
 	vertical-align: middle;
 	white-space: nowrap;
-	
+
 	padding: 24px 36px 24px 36px;
-	
+
 	background-color: #e7e7e7;
 	background-image: linear-gradient(#f8f8f8, #e7e7e7 60%);
 	color: #444;

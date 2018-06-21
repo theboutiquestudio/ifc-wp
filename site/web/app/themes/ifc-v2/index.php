@@ -7,15 +7,27 @@
   <!-- fim do menu de destaque ingresso -->
   <!-- inicio do menu de acesso perfil -->
   <div class="menu-acesso-perfil">
-    <a href="#" class="ingressante">
+    <a
+    href="#"
+    class="ingressante"
+    style="background-image: url('<?= IFC_Func_Site_Geral::get_imagem_perfil_url('ingressante') ; ?>');">
        QUERO ESTUDAR NO IFC
     </a>
 
-    <a href="#" class="aluno">SOU ALUNO</a>
+    <a
+    href="#"
+    class="aluno"
+    style="background-image: url('<?= IFC_Func_Site_Geral::get_imagem_perfil_url('aluno') ; ?>');">SOU ALUNO</a>
 
-    <a href="" class="servidor">SOU SERVIDOR</a>
+    <a
+    href=""
+    class="servidor"
+    style="background-image: url('<?= IFC_Func_Site_Geral::get_imagem_perfil_url('servidor') ; ?>');">SOU SERVIDOR</a>
 
-    <a href="" class="comunidade">SOU MEMBRO DA COMUNIDADE</a>
+    <a
+    href=""
+    class="comunidade"
+    style="background-image: url('<?= IFC_Func_Site_Geral::get_imagem_perfil_url('comunidade') ; ?>');">SOU MEMBRO DA COMUNIDADE</a>
 
   </div>
 
@@ -30,18 +42,18 @@
 
   <!-- Noticias -->
    <section class="noticia-index" role="main">
-  
+
   <h1 class="sr-only"><?php wp_title(''); ?></h1>
   <a href="<?php echo get_post_type_archive_link('noticia_geral'); ?>">
-    <h1 class="section-title">Notícias</h1>  
+    <h1 class="section-title">Notícias</h1>
   </a>
-  
-  <?php  
+
+  <?php
     IFC_Func_Global::exibir_noticias(IFC_Consulta_Noticias::get_noticias());
   ?>
   <h1 class="ver-mais">
     <a href="<?php echo get_post_type_archive_link('noticia_geral'); ?>">MAIS NOTÍCIAS
-      <span class="fa fa-chevron-right"></span>  
+      <span class="fa fa-chevron-right"></span>
     </a>
   </h1>
   </section>
@@ -69,7 +81,7 @@
       <span class="fa fa-bullhorn"></span> Avisos
     </a>
   </h1>
-  <?php 
+  <?php
     $aviso_geral = IFC_Func_Global::consulta_post_type('aviso_geral' , 5);
 
   if ($aviso_geral->have_posts()) {
@@ -81,27 +93,27 @@
         </span>
         <a class="titulo" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
         <br>
-        
-    <?php 
+
+    <?php
     }
     ?>
     <h1 class="ver-mais">
       <a href="<?php echo get_post_type_archive_link('aviso_geral'); ?>">TODOS OS AVISOS
-        <span class="fa fa-chevron-right"></span>  
+        <span class="fa fa-chevron-right"></span>
       </a>
     </h1>
-    <?php  
+    <?php
   }else{
     ?>
     <span>Não há notícias cadastrados</span>
-  <?php 
+  <?php
   }
-  wp_reset_postdata(); 
+  wp_reset_postdata();
 
   ?>
 
-  
-  
+
+
 </section>
   <!-- Fim Avisos -->
   <!-- Agenda Reitoria -->
@@ -111,7 +123,7 @@
         <span class="fa fa-calendar"></span> Agenda da Reitoria
       </a>
     </h1>
-    <?php 
+    <?php
       $agenda_reitoria = IFC_Func_Global::consulta_post_type('agenda_reitor', 5);
 
       if ($agenda_reitoria->have_posts()){
@@ -119,19 +131,19 @@
           $agenda_reitoria->the_post();
           ?>
           <a class="titulo" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-          <?php 
+          <?php
         }
         ?>
         <h1 class="ver-mais">
           <a href="<?php echo get_post_type_archive_link('agenda_reitor'); ?>">TODOS OS EVENTOS DA REITORIA
-            <span class="fa fa-chevron-right"></span>  
+            <span class="fa fa-chevron-right"></span>
           </a>
         </h1>
-        <?php 
+        <?php
       }else{
         ?>
           <span>Não há eventos da reitoria cadastrados.</span>
-        <?php 
+        <?php
       }
     ?>
     <!--<ul class="list-unstyled">-->
@@ -187,7 +199,7 @@
                     'number'   => 1,
                     'size' =>'small',
                   )
-                ); 
+                );
                 ?>
               </div>
             </div>

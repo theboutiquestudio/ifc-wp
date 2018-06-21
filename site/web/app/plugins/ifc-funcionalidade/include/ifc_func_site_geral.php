@@ -12,11 +12,14 @@ class IFC_Func_Site_Geral implements IFC_iFunc{
 		add_action('init', array(__CLASS__, 'registrar_custom_fields'));
 		add_action('wp_enqueue_scripts', array(__CLASS__, 'carregar_styles'));
 
+		add_image_size('perfil', 420, 420);
+
 		if (is_admin()){
 			$this->restaurar_menu_links();
 			add_action('admin_menu', array(__CLASS__, 'esconder_menu_posts'));
 			$this->adicionar_campo_link_ao_attachment();
 			add_action('add_meta_boxes', array(__CLASS__, 'adicionar_meta_boxes'));
+			IFC_Admin_Menu_Geral::registrar();
 		}
 	}
 
@@ -298,7 +301,20 @@ class IFC_Func_Site_Geral implements IFC_iFunc{
 		update_post_meta($evento_id, 'event_date_minute', $minute);
 	}
 	public static function carregar_styles(){
-		wp_enqueue_style('acesso_rapido' ,  plugin_dir_url(dirname(__FILE__)).'/styles/acesso_rapido.css'); 
-		
+		wp_enqueue_style('acesso_rapido' ,  plugin_dir_url(dirname(__FILE__)).'/styles/acesso_rapido.css');
+	}
+
+
+	public static function get_imagem_perfil_url($nome){
+		$opcoes = get_option('opcoes-gerais');
+		$imagem_id = $opcoes["imagem-perfil-{$nome}"];
+
+		$imagem_padrao = plugin_dir_url(dirname(__FILE__)) . 'images/perfil-sem-imagem.png';
+
+		if (empty($imagem_id)) {
+			return $imagem_padrao;
+		} else {
+			return wp_get_attachment_image_src($imagem_id, 'perfil')[0];
+		}
 	}
 }
