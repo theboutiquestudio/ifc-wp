@@ -205,42 +205,4 @@ class IFC_Func{
 
 		return $cache_id_campus;
 	}
-
-	public static function get_id_curso_atual(){
-		global $wpdb;
-		$prefixo = $wpdb->base_prefix . 'ifc_';
-
-		static $cache_id_curso;
-
-		if (!isset($cache_id_curso)) {
-			if (self::get_tipo_site_atual() !== 'curso') {
-				trigger_error("Tentativa de usar get_id_curso_atual quando o site atual não é um curso", E_USER_ERROR);
-			}
-			$cache_id_curso = $wpdb->get_row($wpdb->prepare(
-				"SELECT id FROM {$prefixo}cursos WHERE blog_id = %d",
-				get_current_blog_id()
-			))->id;
-		}
-
-		return $cache_id_curso;
-	}
-
-	public static function get_id_departamento_atual(){
-		global $wpdb;
-		$prefixo = $wpdb->base_prefix . 'ifc_';
-
-		static $cache_id_departamento;
-
-		if (!isset($cache_id_departamento)) {
-			if (self::get_tipo_site_atual() !== 'departamento') {
-				trigger_error("Tentativa de usar get_id_departamento_atual quando o site atual não é um departamento", E_USER_ERROR);
-			}
-			$cache_id_departamento = $wpdb->get_row($wpdb->prepare(
-				"SELECT id FROM {$prefixo}departamentos WHERE blog_id = %d",
-				get_current_blog_id()
-			))->id;
-		}
-
-		return $cache_id_departamento;
-	}
 }

@@ -318,4 +318,20 @@ class IFC_Func_Site_Curso implements IFC_iFunc{
 			return wp_get_attachment_image_src($banner_id, 'banner')[0];
 		}
 	}
+
+	public static function get_id_atual(){
+		global $wpdb;
+		$prefixo = $wpdb->base_prefix . 'ifc_';
+
+		static $cache_id;
+
+		if (!isset($cache_id)) {
+			$cache_id = $wpdb->get_row($wpdb->prepare(
+				"SELECT id FROM {$prefixo}cursos WHERE blog_id = %d",
+				get_current_blog_id()
+			))->id;
+		}
+
+		return $cache_id;
+	}
 }

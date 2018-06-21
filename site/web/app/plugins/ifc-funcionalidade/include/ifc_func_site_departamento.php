@@ -83,5 +83,21 @@ class IFC_Func_Site_Departamento implements IFC_iFunc{
 			';
 		}
 	}
+
+	public static function get_id_atual(){
+		global $wpdb;
+		$prefixo = $wpdb->base_prefix . 'ifc_';
+
+		static $cache_id;
+
+		if (!isset($cache_id)) {
+			$cache_id = $wpdb->get_row($wpdb->prepare(
+				"SELECT id FROM {$prefixo}departamentos WHERE blog_id = %d",
+				get_current_blog_id()
+			))->id;
+		}
+
+		return $cache_id;
+	}
 }
 
