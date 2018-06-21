@@ -75,12 +75,13 @@
 	<div class="col-md-12 col-left sub-banner-exterior ">
 
 		<div class="container">
-			<div class="hidden-xs hidden-sm  ">
+			<div class="hidden-xs hidden-sm">
 				<?php
-       				wp_nav_menu(array(
-          			'theme_location' => 'menu_header',
-        			));
-      			?>
+					wp_nav_menu(array(
+						'theme_location' => 'menu_header',
+						'fallback_cb' => false,
+					));
+				?>
 			</div>
 		</div><!-- /.col-left -->
 	</div>
