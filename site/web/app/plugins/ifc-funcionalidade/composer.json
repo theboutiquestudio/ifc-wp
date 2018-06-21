@@ -1,7 +1,0 @@
-{
-	"name": "portal-ifc-2017/ifc-funcionalidade",
-	"type": "wordpress-plugin",
-	"require": {
-		"composer/installers": "~1.0"
-	}
-}

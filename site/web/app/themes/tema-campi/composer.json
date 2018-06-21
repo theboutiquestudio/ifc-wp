@@ -1,7 +1,0 @@
-{
-	"name": "portal-ifc-2017/tema-campi",
-	"type": "wordpress-theme",
-  	"require": {
-    	"composer/installers": "~1.0"
-  	}
-}
