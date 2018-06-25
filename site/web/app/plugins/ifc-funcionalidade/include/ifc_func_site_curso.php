@@ -252,7 +252,7 @@ class IFC_Func_Site_Curso implements IFC_iFunc{
 
 	public static function carregar_scripts_admin(){
 		wp_enqueue_media();
-		wp_enqueue_script('banner_admin', plugin_dir_url(dirname(__FILE__)) . '/scripts/banner_admin.js', array('jquery'));
+		wp_enqueue_script('admin_upload_imagem', plugin_dir_url(dirname(__FILE__)) . '/scripts/admin_upload_imagem.js', array('jquery'));
 	}
 
 	public static function registrar_menus(){
@@ -297,8 +297,8 @@ class IFC_Func_Site_Curso implements IFC_iFunc{
 			<img src="<?= $imagem_src ?>">
 			<div>
 				<input type="hidden" name="opcoes-curso[banner]" id="opcoes-curso[banner]" value="<?= $imagem_id ?>">
-				<button id="btn_upload_banner" type="submit">Upload</button>
-				<button id="btn_remover_banner" type="submit">Remover</button>
+				<button class="btn_upload_image" type="submit">Upload</button>
+				<button class="btn_remove_image" type="submit">Remover</button>
 				<br>
 				Use imagens com as dimensões <?= $tamanho_imagem['width'] ?> por <?= $tamanho_imagem['height'] ?>.
 			</div>
