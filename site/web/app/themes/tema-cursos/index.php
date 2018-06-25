@@ -16,11 +16,13 @@
   <!-- inicio apresentação -->
     <section class="apresentacao" >
       <h1 class="section-title">Apresentação</h1>
+      <?php echo get_option('about_text'); ?>
     </section>
     <!-- fim apresentação -->
     <!-- info-gerais -->
     <section class="info-gerais">
       <h1 class="section-title">Informações Gerais</h1>
+      <?php echo get_option('info_text'); ?>
     </section>
     <!-- fim info-gerais -->
     <!-- noticia -->
