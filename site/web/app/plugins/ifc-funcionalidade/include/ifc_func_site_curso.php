@@ -83,8 +83,8 @@ class IFC_Func_Site_Curso implements IFC_iFunc{
 
 	public static function _mostrar_menu_sobre_o_curso(){
 		if(isset($_POST['update_settings'])){
-			update_option('about_text', $_POST['about_field']);
-			update_option('info_text', $_POST['info_field']);
+			update_option('about_text', wpautop($_POST['about_field'], true));
+			update_option('info_text', wpautop($_POST['info_field'], true));
 		}
 
 		echo '
