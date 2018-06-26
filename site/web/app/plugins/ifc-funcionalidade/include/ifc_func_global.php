@@ -192,6 +192,11 @@ class IFC_Func_Global implements IFC_iFunc{
 		register_nav_menu('Acesso Rapido', 'acesso_rapido');
 		register_nav_menu('menu_header' , 'menu header');
 
+		register_nav_menu('rodape-coluna-1', 'Rodapé - Coluna 1');
+		register_nav_menu('rodape-coluna-2', 'Rodapé - Coluna 2');
+		register_nav_menu('rodape-coluna-3', 'Rodapé - Coluna 3');
+		register_nav_menu('rodape-coluna-4', 'Rodapé - Coluna 4');
+
 	}
 	public static function carregar_scripts_styles(){
 		wp_enqueue_script('menu_principal' ,  plugin_dir_url(dirname(__FILE__)).'scripts/menu.js', array('jquery'));
