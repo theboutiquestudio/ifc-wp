@@ -209,11 +209,21 @@
           <section class="setores feed">
             <h1 class="section-title">
               <a href="<?php bloginfo('url'); ?>/events/">
-                <span class="fa fa-calendar"></span> Setores
+                <span class="fa fa-clipboard"></span> Setores
               </a>
             </h1>
-            <p>Swine picanha shankle pork, chicken prosciutto burgdoggen doner short ribs sirloin. Picanha drumstick burgdoggen kielbasa, pastrami cow ball tip short loin pork loin brisket andouille sausage capicola pork. Pork loin chicken tail corned beef alcatra, sausage pork chop venison burgdoggen buffalo chuck filet mignon. Landjaeger andouille biltong, chicken kielbasa meatloaf porchetta buffalo jerky fatback. T-bone hamburger landjaeger frankfurter short loin burgdoggen alcatra tenderloin pig beef picanha boudin tri-tip. Leberkas short loin kielbasa chuck short ribs beef. Ham biltong bacon sausage ground round.
+           <?php $consulta =  IFC_Consulta_Setores::get_setores_da_network(get_network()->id);
 
+           foreach ($consulta as $setores) {
+             ?>
+             <ul>
+             	<li>
+             		<a href="<?= $setores->url?>"><?= $setores->nome ?></a>
+             	</li>
+             </ul>
+
+             <?php
+           } ?>
             </p>
           </section>
         </div><!-- /.row-news-courses -->
