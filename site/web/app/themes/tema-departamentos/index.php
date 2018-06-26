@@ -36,7 +36,7 @@
                   </a>
 
                   <p class="categories">
-                    <?php IFC_Func_Site_Departamento::listar_categorias(); ?>
+                    <?php IFC_Func_Site_Setor::listar_categorias(); ?>
                   </p>
 
                 </div>

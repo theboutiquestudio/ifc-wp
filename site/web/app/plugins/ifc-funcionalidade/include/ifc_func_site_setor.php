@@ -1,10 +1,10 @@
 <?php
 
 /**
- * Funcionalidade exclusiva dos sites de departamentos:
+ * Funcionalidade exclusiva dos sites de setores:
  * dti.ifc.edu.br, cecom.araquari.ifc.edu.br, etc.
  */
-class IFC_Func_Site_Departamento implements IFC_iFunc{
+class IFC_Func_Site_Setor implements IFC_iFunc{
 
 	public function executar(){}
 
@@ -26,7 +26,7 @@ class IFC_Func_Site_Departamento implements IFC_iFunc{
 	private static function criar_tabelas(){
 		global $wpdb;
 		$prefixo = $wpdb->base_prefix . 'ifc_';
-		$sql = "CREATE TABLE {$prefixo}departamentos (
+		$sql = "CREATE TABLE {$prefixo}setores (
 			id int(11) NOT NULL auto_increment,
 			blog_id bigint(20) NOT NULL,
 			campi_id int(11) NOT NULL,
@@ -40,7 +40,7 @@ class IFC_Func_Site_Departamento implements IFC_iFunc{
 	private static function remover_tabelas(){
 		global $wpdb;
 		$tabelas = array(
-			'departamentos',
+			'setores',
 		);
 		$prefixo = $wpdb->base_prefix . 'ifc_';
 		foreach ($tabelas as $tabela) {
@@ -92,7 +92,7 @@ class IFC_Func_Site_Departamento implements IFC_iFunc{
 
 		if (!isset($cache_id)) {
 			$cache_id = $wpdb->get_row($wpdb->prepare(
-				"SELECT id FROM {$prefixo}departamentos WHERE blog_id = %d",
+				"SELECT id FROM {$prefixo}setores WHERE blog_id = %d",
 				get_current_blog_id()
 			))->id;
 		}

@@ -13,7 +13,7 @@ class IFC_Func{
 		$this->func_site_noticias = new IFC_Func_Site_Noticias();
 		$this->func_site_campus = new IFC_Func_Site_Campus();
 		$this->func_site_curso = new IFC_Func_Site_Curso();
-		$this->func_site_departamento = new IFC_Func_Site_Departamento();
+		$this->func_site_setor = new IFC_Func_Site_Setor();
 	}
 
 	/**
@@ -36,8 +36,8 @@ class IFC_Func{
 			$this->func_site_campus->executar();
 		} else if ($this->is_current_site('curso')){
 			$this->func_site_curso->executar();
-		} else if ($this->is_current_site('departamento')){
-			$this->func_site_departamento->executar();
+		} else if ($this->is_current_site('setor')){
+			$this->func_site_setor->executar();
 		}
 	}
 
@@ -57,7 +57,7 @@ class IFC_Func{
 		IFC_Func_Site_Noticias::ativarGlobal();
 		IFC_Func_Site_Campus::ativarGlobal();
 		IFC_Func_Site_Curso::ativarGlobal();
-		IFC_Func_Site_Departamento::ativarGlobal();
+		IFC_Func_Site_Setor::ativarGlobal();
 	}
 
 	public static function ativarEmCadaSite(){
@@ -74,8 +74,8 @@ class IFC_Func{
 				IFC_Func_Site_Campus::ativarEmSite();
 			} else if (self::is_current_site('curso')){
 				IFC_Func_Site_Curso::ativarEmSite();
-			} else if (self::is_current_site('departamento')){
-				IFC_Func_Site_Departamento::ativarEmSite();
+			} else if (self::is_current_site('setor')){
+				IFC_Func_Site_Setor::ativarEmSite();
 			}
 			restore_current_blog();
 		}
@@ -97,7 +97,7 @@ class IFC_Func{
 		IFC_Func_Site_Noticias::desativarGlobal();
 		IFC_Func_Site_Campus::desativarGlobal();
 		IFC_Func_Site_Curso::desativarGlobal();
-		IFC_Func_Site_Departamento::desativarGlobal();
+		IFC_Func_Site_Setor::desativarGlobal();
 	}
 
 	public static function desativarEmCadaSite(){
@@ -114,8 +114,8 @@ class IFC_Func{
 				IFC_Func_Site_Campus::desativarEmSite();
 			} else if (self::is_current_site('curso')){
 				IFC_Func_Site_Curso::desativarEmSite();
-			} else if (self::is_current_site('departamento')){
-				IFC_Func_Site_Departamento::desativarEmSite();
+			} else if (self::is_current_site('setor')){
+				IFC_Func_Site_Setor::desativarEmSite();
 			}
 
 			restore_current_blog();
@@ -139,13 +139,13 @@ class IFC_Func{
 				get_current_blog_id()
 			));
 			return $curso_row !== null;
-		} else if ($site === 'departamento'){
+		} else if ($site === 'setor'){
 			$prefix = $wpdb->base_prefix . 'ifc_';
-			$departamento_row = $wpdb->get_row($wpdb->prepare(
-				"SELECT blog_id FROM {$prefix}departamentos WHERE blog_id = %d",
+			$setor_row = $wpdb->get_row($wpdb->prepare(
+				"SELECT blog_id FROM {$prefix}setores WHERE blog_id = %d",
 				get_current_blog_id()
 			));
-			return $departamento_row !== null;
+			return $setor_row !== null;
 		}
 	}
 
@@ -155,7 +155,7 @@ class IFC_Func{
 			'noticias',
 			'campus',
 			'curso',
-			'departamento'
+			'setor'
 		);
 		static $cache_tipo;
 
@@ -191,14 +191,14 @@ class IFC_Func{
 						get_current_blog_id()
 					))->campi_id;
 					break;
-				case 'departamento':
+				case 'setor':
 					$cache_id_campus = $wpdb->get_row($wpdb->prepare(
-						"SELECT campi_id FROM {$prefixo}departamentos WHERE blog_id = %d",
+						"SELECT campi_id FROM {$prefixo}setores WHERE blog_id = %d",
 						get_current_blog_id()
 					))->campi_id;
 					break;
 				default:
-					trigger_error("Tentativa de usar get_id_campus_atual quando o site atual não é um campus, curso, ou departamento", E_USER_ERROR);
+					trigger_error("Tentativa de usar get_id_campus_atual quando o site atual não é um campus, curso, ou setor", E_USER_ERROR);
 					break;
 			}
 		}

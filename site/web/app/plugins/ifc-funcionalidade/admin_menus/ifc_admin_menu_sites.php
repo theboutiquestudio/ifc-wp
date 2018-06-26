@@ -67,7 +67,7 @@ class IFC_Admin_Menu_Sites {
 			 AND blog_id not IN (
 			 	SELECT blog_id FROM {$prefixo}cursos
 			 	UNION
-			 	SELECT blog_id FROM {$prefixo}departamentos
+			 	SELECT blog_id FROM {$prefixo}setores
 			 )
 			 ORDER BY registered DESC",
 			 get_network()->id, get_current_blog_id()
@@ -98,11 +98,11 @@ class IFC_Admin_Menu_Sites {
 		));
 	}
 
-	private static function get_departamentos_do_campus() {
+	private static function get_setores_do_campus() {
 		global $wpdb;
 		$prefixo = $wpdb->base_prefix . 'ifc_';
 		return $wpdb->get_results($wpdb->prepare(
-			"SELECT id, blog_id, nome FROM {$prefixo}departamentos WHERE campi_id=%d ORDER BY nome",
+			"SELECT id, blog_id, nome FROM {$prefixo}setores WHERE campi_id=%d ORDER BY nome",
 			$wpdb->get_row($wpdb->prepare(
 				"SELECT id FROM {$prefixo}campi WHERE blog_id=%d",
 				get_main_site_id()
@@ -126,8 +126,8 @@ class IFC_Admin_Menu_Sites {
 				<h3>Cursos</h3>
 				<?php self::mostrarCursos() ?>
 				<?php endif ?>
-				<h3>Departamentos</h3>
-				<?php self::mostrarDepartamentos() ?>
+				<h3>Setores</h3>
+				<?php self::mostrarSetores() ?>
 			</form>
 		</div>
 		<?php
@@ -195,30 +195,30 @@ class IFC_Admin_Menu_Sites {
 		<?php
 	}
 
-	private static function mostrarDepartamentos() {
+	private static function mostrarSetores() {
 		$sites = self::get_sites_nao_relacionados();
-		$departamentos = self::get_departamentos_do_campus();
+		$setores = self::get_setores_do_campus();
 		?>
-		<div class="departamentos box">
+		<div class="setores box">
 			<?php if (!empty($sites)): ?>
 				<div class="input-group">
-					<label for="novo_departamento">Selecione um novo site</label>
-					<select id="novo_departamento" name="novo_departamento">
+					<label for="novo_setor">Selecione um novo site</label>
+					<select id="novo_setor" name="novo_setor">
 						<?php foreach($sites as $site): ?>
 						<option value="<?= $site->blog_id ?>"><?= $site->blogname ?></option>
 						<?php endforeach ?>
 					</select>
-					<button type="button" onclick="adicionarDepartamento(this)">Adicionar departamento</button>
+					<button type="button" onclick="adicionarSetor(this)">Adicionar setor</button>
 				</div>
 			<?php else: ?>
-				<div>(Nenhum novo departamento disponível.)</div>
+				<div>(Nenhum novo setor disponível.)</div>
 			<?php endif ?>
-			<p class="titulo-lista">Departamentos atuais</p>
-			<ul id="lista_departamentos" class="lista">
-				<?php foreach($departamentos as $departamento): ?>
-					<li class="item departamento" data-id="<?= $departamento->blog_id ?>">
+			<p class="titulo-lista">Setores atuais</p>
+			<ul id="lista_setores" class="lista">
+				<?php foreach($setores as $setor): ?>
+					<li class="item setor" data-id="<?= $setor->blog_id ?>">
 						<button type="button" class="deletar" onclick="deletarItem(event)"><span class="dashicons dashicons-no"></span></button>
-						<div class="nome"><?= $departamento->nome ?></div>
+						<div class="nome"><?= $setor->nome ?></div>
 					</li>
 				<?php endforeach ?>
 			</ul>
@@ -237,10 +237,10 @@ class IFC_Admin_Menu_Sites {
 		} else {
 			$cursosNovos = array();
 		}
-		if (!empty($_POST['departamentos'])) {
-			$departamentosNovos = array_map('intval', $_POST['departamentos']);
+		if (!empty($_POST['setores'])) {
+			$setoresNovos = array_map('intval', $_POST['setores']);
 		} else {
-			$departamentosNovos = array();
+			$setoresNovos = array();
 		}
 
 		if (IFC_Func::is_current_site('geral')) {
@@ -249,7 +249,7 @@ class IFC_Admin_Menu_Sites {
 		if (IFC_Func::is_current_site('campus')) {
 			self::salvarCursos($cursosNovos);
 		}
-		self::salvarDepartamentos($departamentosNovos);
+		self::salvarSetores($setoresNovos);
 	}
 
 	private static function salvarCampi($campiNovosIds){
@@ -300,7 +300,7 @@ class IFC_Admin_Menu_Sites {
 					array("%d")
 				);
 				$wpdb->delete(
-					"{$prefixo}departamentos",
+					"{$prefixo}setores",
 					array("campi_id" => $campusAtualIdBanco),
 					array("%d")
 				);
@@ -356,7 +356,7 @@ class IFC_Admin_Menu_Sites {
 		}
 	}
 
-	private static function salvarDepartamentos($departamentosNovosIds){
+	private static function salvarSetores($setoresNovosIds){
 		global $wpdb;
 		$prefixo = $wpdb->base_prefix . 'ifc_';
 
@@ -366,38 +366,38 @@ class IFC_Admin_Menu_Sites {
 			$campusId
 		))->id;
 
-		$get_blog_id_from_departamento = function($departamento) {
-			return $departamento->blog_id;
+		$get_blog_id_from_setor = function($setor) {
+			return $setor->blog_id;
 		};
-		$departamentosAtuais = array_map($get_blog_id_from_departamento, self::get_departamentos_do_campus());
+		$setoresAtuais = array_map($get_blog_id_from_setor, self::get_setores_do_campus());
 
-		foreach ($departamentosNovosIds as $departamentoNovoId) {
-			$departamentoNovoNome = get_sites(array('ID' => $departamentoNovoId))[0]->blogname;
-			if (in_array($departamentoNovoId, $departamentosAtuais)){
+		foreach ($setoresNovosIds as $setorNovoId) {
+			$setorNovoNome = get_sites(array('ID' => $setorNovoId))[0]->blogname;
+			if (in_array($setorNovoId, $setoresAtuais)){
 				$wpdb->update(
-					"{$prefixo}departamentos",
-					array("nome" => $departamentoNovoNome),
-					array("blog_id" => $departamentoNovoId),
+					"{$prefixo}setores",
+					array("nome" => $setorNovoNome),
+					array("blog_id" => $setorNovoId),
 					array('%s'),
 					array('%d')
 				);
 			} else {
 				$wpdb->insert(
-					"{$prefixo}departamentos",
+					"{$prefixo}setores",
 					array(
-						"blog_id" => $departamentoNovoId,
+						"blog_id" => $setorNovoId,
 						"campi_id" => $campusIdBanco,
-						"nome" => $departamentoNovoNome,
+						"nome" => $setorNovoNome,
 					),
 					array('%d', '%d', '%s')
 				);
 			}
 		}
-		foreach ($departamentosAtuais as $departamentoAtualId) {
-			if (!in_array($departamentoAtualId, $departamentosNovosIds)){
+		foreach ($setoresAtuais as $setorAtualId) {
+			if (!in_array($setorAtualId, $setoresNovosIds)){
 				$wpdb->delete(
-					"{$prefixo}departamentos",
-					array("blog_id" => $departamentoAtualId),
+					"{$prefixo}setores",
+					array("blog_id" => $setorAtualId),
 					array("%d")
 				);
 			}

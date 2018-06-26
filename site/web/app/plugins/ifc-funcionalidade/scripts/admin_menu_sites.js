@@ -1,4 +1,4 @@
-var listas = ['#lista_campi', '#lista_cursos', '#lista_departamentos'];
+var listas = ['#lista_campi', '#lista_cursos', '#lista_setores'];
 
 function deletarItem(event){
 	event.target.parentElement.remove();
@@ -57,10 +57,10 @@ function adicionarCurso(botao){
 	submeterForm();
 }
 
-function adicionarDepartamento(botao){
+function adicionarSetor(botao){
 	$(botao).prop('disabled', true);
-	let departamentoSelecionado = getSelectedSite('#novo_departamento');
-	addItemToLista('#lista_departamentos', departamentoSelecionado.id, departamentoSelecionado.nome);
+	let setorSelecionado = getSelectedSite('#novo_setor');
+	addItemToLista('#lista_setores', setorSelecionado.id, setorSelecionado.nome);
 	submeterForm();
 }
 
@@ -75,7 +75,7 @@ function submeterForm(){
 			action: 'ifc_admin_menu_sites',
 			campi: getIdsItems('#lista_campi'),
 			cursos: getIdsItems('#lista_cursos'),
-			departamentos: getIdsItems('#lista_departamentos'),
+			setores: getIdsItems('#lista_setores'),
 		}
 	)
 		.done(() => window.location.reload())
