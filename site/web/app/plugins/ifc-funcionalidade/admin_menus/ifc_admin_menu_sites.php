@@ -98,15 +98,12 @@ class IFC_Admin_Menu_Sites {
 		));
 	}
 
-	private static function get_setores_do_campus() {
+	private static function get_setores_da_network() {
 		global $wpdb;
 		$prefixo = $wpdb->base_prefix . 'ifc_';
 		return $wpdb->get_results($wpdb->prepare(
-			"SELECT id, blog_id, nome FROM {$prefixo}setores WHERE campi_id=%d ORDER BY nome",
-			$wpdb->get_row($wpdb->prepare(
-				"SELECT id FROM {$prefixo}campi WHERE blog_id=%d",
-				get_main_site_id()
-			))->id
+			"SELECT id, blog_id, nome FROM {$prefixo}setores WHERE network_id=%d ORDER BY nome",
+			get_network()->id
 		));
 	}
 
@@ -197,7 +194,7 @@ class IFC_Admin_Menu_Sites {
 
 	private static function mostrarSetores() {
 		$sites = self::get_sites_nao_relacionados();
-		$setores = self::get_setores_do_campus();
+		$setores = self::get_setores_da_network();
 		?>
 		<div class="setores box">
 			<?php if (!empty($sites)): ?>
@@ -360,16 +357,12 @@ class IFC_Admin_Menu_Sites {
 		global $wpdb;
 		$prefixo = $wpdb->base_prefix . 'ifc_';
 
-		$campusId = get_main_site_id();
-		$campusIdBanco = $wpdb->get_row($wpdb->prepare(
-			"SELECT id FROM {$prefixo}campi WHERE blog_id = %d",
-			$campusId
-		))->id;
+		$networkId = get_network()->id;
 
 		$get_blog_id_from_setor = function($setor) {
 			return $setor->blog_id;
 		};
-		$setoresAtuais = array_map($get_blog_id_from_setor, self::get_setores_do_campus());
+		$setoresAtuais = array_map($get_blog_id_from_setor, self::get_setores_da_network());
 
 		foreach ($setoresNovosIds as $setorNovoId) {
 			$setorNovoNome = get_sites(array('ID' => $setorNovoId))[0]->blogname;
@@ -386,7 +379,7 @@ class IFC_Admin_Menu_Sites {
 					"{$prefixo}setores",
 					array(
 						"blog_id" => $setorNovoId,
-						"campi_id" => $campusIdBanco,
+						"network_id" => $networkId,
 						"nome" => $setorNovoNome,
 					),
 					array('%d', '%d', '%s')

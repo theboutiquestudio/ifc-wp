@@ -29,7 +29,7 @@ class IFC_Func_Site_Setor implements IFC_iFunc{
 		$sql = "CREATE TABLE {$prefixo}setores (
 			id int(11) NOT NULL auto_increment,
 			blog_id bigint(20) NOT NULL,
-			campi_id int(11) NOT NULL,
+			network_id bigint(20) NOT NULL,
 			nome varchar(200) NOT NULL,
 			PRIMARY KEY  (id)
 		) {$wpdb->get_charset_collate()}

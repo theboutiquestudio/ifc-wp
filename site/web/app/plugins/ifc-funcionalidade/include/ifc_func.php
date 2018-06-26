@@ -192,10 +192,15 @@ class IFC_Func{
 					))->campi_id;
 					break;
 				case 'setor':
-					$cache_id_campus = $wpdb->get_row($wpdb->prepare(
-						"SELECT campi_id FROM {$prefixo}setores WHERE blog_id = %d",
+					$network_id = $wpdb->get_row($wpdb->prepare(
+						"SELECT network_id FROM {$prefixo}setores WHERE blog_id = %d",
 						get_current_blog_id()
-					))->campi_id;
+					))->network_id;
+					$campus_blog_id = get_main_site_id($network_id);
+					$cache_id_campus = $wpdb->get_row($wpdb->prepare(
+						"SELECT id FROM {$prefixo}campi WHERE blog_id = %d",
+						$campus_blog_id
+					))->id;
 					break;
 				default:
 					trigger_error("Tentativa de usar get_id_campus_atual quando o site atual não é um campus, curso, ou setor", E_USER_ERROR);
