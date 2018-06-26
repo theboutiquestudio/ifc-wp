@@ -738,10 +738,10 @@ header .lista-links-acessibilidade li span {
   grid-template-areas: "menu-ingresso menu-perfil menu-perfil menu-perfil"
                         "menu noticia noticia acesso-rapido"
                         "menu avisos agenda eventos"
-                        "menu setores setores redessociais";
+                        "menu redesocial redesocialb setores";
   grid-template-columns: 14em 1fr 1fr 17.5em;
+  grid-template-rows: 210px auto auto auto;
   grid-gap: 3.75em;
-  grid-template-rows: 210px;
 }
 @media screen  and (max-width:  990px){
   .main-grid{
@@ -969,8 +969,12 @@ a:hover .destaque_ingresso{
 /* Fim eventos */
 /* Fim Feed */
 /*redes socias*/
-.redes-sociais{
-  grid-area: redessociais;
+.rede-social{
+  grid-area: redesocial;
+}
+
+.rede-social2{
+  grid-area: redesocialb;
 }
 .null-instagram-feed img{
   width: 100%;

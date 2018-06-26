@@ -170,19 +170,15 @@
       </section>
 
           <!-- Fim eventos -->
-
-          <section class="redes-sociais feed">
-            <h1 class="section-title ">
+          <!-- rede social -->
+          <section class="rede-social">
+          	<h1 class="section-title ">
               <a href="">
-                <span class="fa fa-calendar"></span> Redes Sociais
+                <span class="fa fa-facebook-square"></span> Facebook
               </a>
             </h1>
-            <ul class="nav nav-tabs" id="tabs">
-              <li class="active"><a data-toggle="tab" href="#facebook">Facebook</a></li>
-              <li><a data-toggle="tab" href="#instagram">Instagram</a></li>
-            </ul>
-            <div class="tab-content">
-              <div id="facebook" class="tab-pane active">
+
+             <div id="facebook" class="tab-pane active">
                 <?php
                 the_widget('WEF_Widget',
                   array(
@@ -191,17 +187,23 @@
                 );
                 ?>
               </div>
+          </section>
 
-              <div id="instagram" class="tab-pane">
-                <?php the_widget('null_instagram_widget',
-                  array(
-                    'username' => 'ifc.oficial',
-                    'number'   => 1,
-                    'size' =>'small',
-                  )
-                );
-                ?>
-              </div>
+          <section class="rede-social2">
+          	<h1 class="section-title ">
+              <a href="">
+                <span class="fa fa-instagram"></span> Instagram
+              </a>
+            </h1>
+            <div id="instagram" class="tab-pane">
+              <?php the_widget('null_instagram_widget',
+                array(
+                  'username' => 'ifc.oficial',
+                  'number'   => 1,
+                  'size' =>'small',
+                )
+              );
+              ?>
             </div>
           </section>
           <section class="setores feed">
