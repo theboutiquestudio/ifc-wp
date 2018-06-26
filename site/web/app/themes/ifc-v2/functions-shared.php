@@ -37,7 +37,7 @@ function excerpt($limit) {
 		$excerpt = implode(" ",$excerpt);
 	}else{
 		$excerpt = implode(" ",$excerpt);
-	} 
+	}
 	$excerpt = preg_replace('`\[[^\]]*\]`','',$excerpt);
 	return $excerpt;
 }
@@ -47,8 +47,8 @@ add_theme_support( 'post-thumbnails' );
 set_post_thumbnail_size();
 
 /*=== PAGINAÇÃO ===*/
-function custom_pagination($pages = '', $range = 2) {  
-	$showitems = ($range * 2)+1;  
+function custom_pagination($pages = '', $range = 2) {
+	$showitems = ($range * 2)+1;
 
 	global $paged;
 	if(empty($paged)) $paged = 1;
@@ -59,7 +59,7 @@ function custom_pagination($pages = '', $range = 2) {
 		if(!$pages)	{
 			$pages = 1;
 		}
-	}   
+	}
 
 	if(1 != $pages)	{
 		echo "<nav><ul class='pagination'>";
@@ -72,7 +72,7 @@ function custom_pagination($pages = '', $range = 2) {
 			}
 		}
 
-		if ($paged < $pages && $showitems < $pages) echo "<li><a href='".get_pagenum_link($paged + 1)."'>&rsaquo;</a></li>";  
+		if ($paged < $pages && $showitems < $pages) echo "<li><a href='".get_pagenum_link($paged + 1)."'>&rsaquo;</a></li>";
 		if ($paged < $pages-1 &&  $paged+$range-1 < $pages && $showitems < $pages) echo "<li><a href='".get_pagenum_link($pages)."'>Última</a></li>";
 		echo "</ul></nav>\n";
 	}
