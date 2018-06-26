@@ -106,24 +106,6 @@ class IFC_Func_Site_Geral implements IFC_iFunc{
 				wp_insert_term($cat['nome'], 'category', array('slug' => $cat['slug']));
 			}
 		}
-
-		$categorias_de_link = array(
-			array('nome' => 'Rodapé - Cursos',              'slug' => 'rodape-cursos'),
-			array('nome' => 'Rodapé - Alunos',              'slug' => 'rodape-alunos'),
-			array('nome' => 'Rodapé - Servidores',          'slug' => 'rodape-servidores'),
-			array('nome' => 'Rodapé - Departamentos',       'slug' => 'rodape-departamentos'),
-			array('nome' => 'Lateral - Especialização',     'slug' => 'lateral-especializacao'),
-			array('nome' => 'Lateral - Ensino Superior',    'slug' => 'lateral-ensino-superior'),
-			array('nome' => 'Lateral – Cursos Técnicos',    'slug' => 'lateral-cursos-tecnicos'),
-			array('nome' => 'Lateral - Ensino Médio',       'slug' => 'lateral-ensino-medio'),
-			array('nome' => 'Lateral - Formas de Ingresso', 'slug' => 'lateral-formas-de-ingresso'),
-		);
-		foreach($categorias_de_link as $cat){
-			$existente = term_exists($cat['nome'], 'link_category') !== null;
-			if (!$existente){
-				wp_insert_term($cat['nome'], 'link_category', array('slug' => $cat['slug']));
-			}
-		}
 	}
 
 	public static function registrar_custom_post_types(){
