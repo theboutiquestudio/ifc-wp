@@ -71,8 +71,8 @@ class IFC_Consulta_Noticias {
 		foreach ($query->posts as $post) {
 			$post->site_id = $site_id;
 			$post->blog_id = $blog_id;
-			$post->destaque = get_field('destaque', $post->id);
-			$post->propagar_para_todos_os_campi = get_field('propagar_para_todos_os_campi', $post->id);
+			$post->destaque = get_field('destaque', $post->ID) === '1';
+			$post->propagar_para_todos_os_campi = get_field('propagar_para_todos_os_campi', $post->ID) === '1';
 		}
 
 		restore_current_blog();
@@ -101,8 +101,8 @@ class IFC_Consulta_Noticias {
 		foreach ($query->posts as $post) {
 			$post->site_id = $site_id;
 			$post->blog_id = $blog_id;
-			$post->destaque = get_field('destaque', $post->id);
-			$post->propagar_para_todos_os_cursos = get_field('propagar_para_todos_os_cursos', $post->id);
+			$post->destaque = get_field('destaque', $post->ID) === '1';
+			$post->propagar_para_todos_os_cursos = get_field('propagar_para_todos_os_cursos', $post->ID) === '1';
 		}
 		restore_current_blog();
 		return $query->posts;
