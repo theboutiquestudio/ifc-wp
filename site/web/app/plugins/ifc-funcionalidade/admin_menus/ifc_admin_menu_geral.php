@@ -4,13 +4,7 @@ class IFC_Admin_Menu_Geral {
 
 	public static function registrar() {
 		add_action('admin_enqueue_scripts', array(__CLASS__, '_carregar_script'));
-		add_options_page(
-			'Opções gerais',
-			'Opções gerais',
-			'manage_options',
-			'opcoes-gerais',
-			array(__CLASS__, 'mostrar_menu_admin')
-		);
+		add_action('admin_menu', array(__CLASS__, '_registrar'));
 		register_setting('grupo-opcoes-gerais', 'opcoes-gerais');
 		add_settings_section('imagens-perfis', 'Imagens dos perfis', array(__CLASS__, 'mostrar_descricao_section_imagens_perfis'), 'opcoes-gerais');
 
@@ -28,6 +22,16 @@ class IFC_Admin_Menu_Geral {
 	public static function _carregar_script(){
 		wp_enqueue_media();
 		wp_enqueue_script('admin_upload_imagem', plugin_dir_url(dirname(__FILE__)) . 'scripts/admin_upload_imagem.js', array('jquery'));
+	}
+
+	public static function _registrar(){
+		add_options_page(
+			'Opções gerais',
+			'Opções gerais',
+			'manage_options',
+			'opcoes-gerais',
+			array(__CLASS__, 'mostrar_menu_admin')
+		);
 	}
 
 	public static function mostrar_menu_admin(){
