@@ -1,6 +1,30 @@
 <?php
 require 'vendor/autoload.php';
 
+function carregar_scripts_e_styles() {
+	wp_enqueue_script(
+		'ifc_cookies',
+		get_template_directory_uri() . '/components/cookies-js/dist/cookies.min.js'
+	);
+	wp_enqueue_script(
+		'ifc_bootstrap',
+		get_template_directory_uri() . '/components/bootstrap/dist/js/bootstrap.min.js',
+		array('jquery')
+	);
+	wp_enqueue_script(
+		'ifc_magnific_popup',
+		get_template_directory_uri() . '/components/magnific-popup/dist/jquery.magnific-popup.min.js',
+		array('jquery')
+	);
+	wp_enqueue_script(
+		'ifc_main',
+		get_template_directory_uri() . '/assets/javascripts/main.js',
+		array('jquery')
+	);
+}
+
+add_action('wp_enqueue_scripts', 'carregar_scripts_e_styles');
+
 /*=== Thumbnails ===*/
 add_image_size('large-thumb', 240, 170, true);
 add_image_size('small-thumb', 120, 90, true);

@@ -10,7 +10,7 @@
     <h1 class="sr-only">Links de acesso rápido</h1>
     <div class="links-wrapper">
       <div class="container">
-        
+
         <div class="row row-links">
 
           <?php
@@ -42,14 +42,14 @@
           ?>
 
         </div><!-- /.row-links -->
-        
+
       </div><!-- /.container -->
     </div><!-- /.links-wrapper -->
   </section>
-  
+
   <div class="bottom-wrapper">
     <div class="container">
-  
+
       <section>
         <div class="row row-bottom">
           <div class="col-md-12">
@@ -58,22 +58,13 @@
           </div>
         </div><!-- /.bottom-links -->
       </section>
-      
+
     </div><!-- /.container -->
   </div><!-- /.bottom-wrapper -->
 </footer>
 <!-- /FOOTER -->
 
 </div>
-
-    
-<!-- JavaScript & DHTML -->
-<script src="<?php echo content_url(); ?>/themes/ifc-v2/components/cookies-js/dist/cookies.min.js"></script>
-<script src="<?php echo content_url(); ?>/themes/ifc-v2/components/jquery/dist/jquery.min.js"></script>
-<script src="<?php echo content_url(); ?>/themes/ifc-v2/components/jquery-ui/jquery-ui.min.js"></script>
-<script src="<?php echo content_url(); ?>/themes/ifc-v2/components/bootstrap/dist/js/bootstrap.min.js"></script>
-<script src="<?php echo content_url(); ?>/themes/ifc-v2/components/magnific-popup/dist/jquery.magnific-popup.min.js"></script>
-<script src="<?php echo content_url(); ?>/themes/ifc-v2/assets/javascripts/main.js"></script>
 
 <?php restore_current_blog(); ?>
 
@@ -86,7 +77,7 @@
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-  
+
   ga('create', 'UA-44402338-1', {'cookieDomain': 'araquari.ifc.edu.br'});
   ga('send', 'pageview');
 </script>
