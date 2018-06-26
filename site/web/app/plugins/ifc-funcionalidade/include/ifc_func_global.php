@@ -15,6 +15,8 @@ class IFC_Func_Global implements IFC_iFunc{
 
 		add_action('wp_enqueue_scripts', array(__CLASS__, 'carregar_scripts_styles'));
 
+		add_action('rest_authentication_errors', array(__CLASS__, 'desabilitar_api_rest'));
+
 		if (is_admin()){
 			add_action('admin_init', array(__CLASS__, 'refazer_permalinks'));
 			add_filter('tiny_mce_before_init', array(__CLASS__, '_configurar_editor_tiny_mce'));
@@ -198,6 +200,15 @@ class IFC_Func_Global implements IFC_iFunc{
 		register_nav_menu('rodape-coluna-4', 'Rodapé - Coluna 4');
 
 	}
+
+	public static function desabilitar_api_rest(){
+		return new WP_Error(
+			'api_rest_desabilitada',
+			'O acesso à API REST está desabilitado.',
+			array('status' => 403)
+		);
+	}
+
 	public static function carregar_scripts_styles(){
 		wp_enqueue_script('menu_principal' ,  plugin_dir_url(dirname(__FILE__)).'scripts/menu.js', array('jquery'));
 		wp_enqueue_style('global_style' ,  plugin_dir_url(dirname(__FILE__)).'styles/global_style.css');
