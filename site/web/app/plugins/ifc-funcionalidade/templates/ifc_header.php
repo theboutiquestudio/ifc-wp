@@ -43,7 +43,7 @@
 						<div class="row">
 							<div class="col-sm-12">
 								<div class="pull-right search-form">
-									<form method="get" id="searchform" action="<?php restore_current_blog(); bloginfo('url'); switch_to_blog(1); ?>">
+									<form method="get" id="searchform" action="<?php bloginfo('url'); ?>">
 										<label for="irbusca" class="sr-only">Pesquisa</label>
 										<input type="text" name="s" id="irbusca" accesskey="3" class="form-control search-query" placeholder="<?php echo get_search_query() != '' ? get_search_query() : 'Pesquisar'; ?>">
 									</form>

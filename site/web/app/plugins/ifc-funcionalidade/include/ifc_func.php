@@ -124,23 +124,24 @@ class IFC_Func{
 
 	public static function is_current_site($site){
 		global $wpdb;
+		$prefix = $wpdb->base_prefix . 'ifc_';
 		if ($site === 'geral'){
-			return is_main_site(null, 1);
+			return get_network()->id === get_main_network_id() && is_main_site();
 		} else if ($site === 'noticias'){
 			$nomes = explode('.', get_blog_details()->domain);
 			return in_array('noticias', $nomes);
 		} else if ($site === 'campus'){
-			$id_rede_atual = get_network()->id;
-			return $id_rede_atual != 1 && is_main_site();
+			return count($wpdb->get_row($wpdb->prepare(
+				"SELECT id FROM {$prefix}campi WHERE blog_id = %d",
+				get_current_blog_id()
+			))) === 1;
 		} else if ($site === 'curso'){
-			$prefix = $wpdb->base_prefix . 'ifc_';
 			$curso_row = $wpdb->get_row($wpdb->prepare(
 				"SELECT blog_id FROM {$prefix}cursos WHERE blog_id = %d",
 				get_current_blog_id()
 			));
 			return $curso_row !== null;
 		} else if ($site === 'setor'){
-			$prefix = $wpdb->base_prefix . 'ifc_';
 			$setor_row = $wpdb->get_row($wpdb->prepare(
 				"SELECT blog_id FROM {$prefix}setores WHERE blog_id = %d",
 				get_current_blog_id()

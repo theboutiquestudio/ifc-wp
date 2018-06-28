@@ -31,10 +31,10 @@
   <body <?php body_class(); ?>>
 
     <div id="page-canvas">
-            
+
       <div id="page-content">
-        
+
+             <?php restore_current_blog(); ?>
              <!-- plugin header  -->
              <?php IFC_Header::mostrar(); ?>
 
-<?php restore_current_blog(); ?>
