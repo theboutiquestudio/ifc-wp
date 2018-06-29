@@ -90,7 +90,7 @@
 <!-- /HEADER -->
 
 <div class="container">
-	<p>Você está aqui: </p>
+	<p style="text-transform: uppercase;">Você está aqui: <?php IFC_Breadcrumbs::mostrar() ?></p>
 </div>
 
 <a href="#" id="irconteudo" class="sr-only">Início do conteúdo</a>
