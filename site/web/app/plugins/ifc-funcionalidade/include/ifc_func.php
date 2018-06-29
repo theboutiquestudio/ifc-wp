@@ -198,10 +198,16 @@ class IFC_Func{
 						get_current_blog_id()
 					))->network_id;
 					$campus_blog_id = get_main_site_id($network_id);
-					$cache_id_campus = $wpdb->get_row($wpdb->prepare(
+					$row = $wpdb->get_row($wpdb->prepare(
 						"SELECT id FROM {$prefixo}campi WHERE blog_id = %d",
 						$campus_blog_id
-					))->id;
+					));
+					// Setor pode não ter um campus
+					if ($row !== null){
+						$cache_id_campus = $row->id;
+					} else {
+						$cache_id_campus = null;
+					}
 					break;
 				default:
 					trigger_error("Tentativa de usar get_id_campus_atual quando o site atual não é um campus, curso, ou setor", E_USER_ERROR);
