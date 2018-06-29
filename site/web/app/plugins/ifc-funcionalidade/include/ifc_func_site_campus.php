@@ -65,7 +65,7 @@ class IFC_Func_Site_Campus implements IFC_iFunc{
 			'noticia_campus' => array(
 				'labels' => array(
 					'name' => 'Notícias',
-					'singular_name' => 'Noticias',
+					'singular_name' => 'Notícia',
 					'all_items' =>  'Todas as notícias',
 				),
 			),

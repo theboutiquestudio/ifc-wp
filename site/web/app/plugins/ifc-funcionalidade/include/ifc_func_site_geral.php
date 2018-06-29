@@ -113,7 +113,7 @@ class IFC_Func_Site_Geral implements IFC_iFunc{
 			'noticia_geral' => array(
 				'labels' => array(
 					'name' => 'Notícias',
-					'singular_name' => 'Noticias',
+					'singular_name' => 'Notícia',
 					'all_items' => 'Todas as notícias',
 				),
 				'rewrite' => array('slug' => 'noticia-geral'),

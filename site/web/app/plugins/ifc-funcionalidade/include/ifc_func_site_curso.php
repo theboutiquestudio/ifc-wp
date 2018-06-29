@@ -125,7 +125,7 @@ class IFC_Func_Site_Curso implements IFC_iFunc{
 			'noticia_curso' => array(
 				'labels' => array(
 					'name' => 'Notícias',
-					'singular_name' => 'Noticias',
+					'singular_name' => 'Notícia',
 					'all_items' =>  'Todas as notícias',
 				),
 			),
