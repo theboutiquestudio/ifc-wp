@@ -11,10 +11,14 @@
               <a>Nossos Cursos</a>
               <ul>
                 <?php
-                  $info_curso = IFC_Consulta_Cursos::get_cursos_do_campi(4);
+                  $info_curso = IFC_Consulta_Cursos::get_cursos_do_campi(IFC_Func::get_id_campus_atual());
                   foreach ($info_curso as $curso) {
                     ?>
-                    <li><?= $curso->nome ?></li>
+                    <li>
+                      <a href="<?= $curso->url ?>">
+                        <?= $curso->nome ?>
+                      </a>
+                    </li>
                     <?php
                   }
                 ?>
