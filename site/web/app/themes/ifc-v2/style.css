@@ -187,6 +187,9 @@ a:hover .destaque_ingresso{
 .noticia-index{
   grid-area: noticia;
   grid-column: span 2;
+
+  /* Necessário para o carrossel funcionar */
+  overflow: hidden;
 }
 /* Fim Noticia Index */
 
