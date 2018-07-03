@@ -13,6 +13,9 @@ class IFC_Func_Site_Campus implements IFC_iFunc{
 		add_action('wp_enqueue_scripts', array(__CLASS__, 'carregar_styles'));
 		add_action('init', array(__CLASS__, 'registrar_custom_post_types'));
 		add_action('init', array(__CLASS__, 'registrar_custom_fields'));
+
+		IFC_Carrossel::registrar();
+
 		add_image_size('banner', 1170, 210);
 
 

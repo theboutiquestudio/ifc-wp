@@ -31,7 +31,10 @@
             <a href="<?php echo get_post_type_archive_link('noticia_campus'); ?>">Notícias
             </a>
           </h1>
-          <?php IFC_Func_Global::exibir_noticias(IFC_Consulta_Noticias::get_noticias()); ?>
+          <?php
+            IFC_Carrossel::mostrar(IFC_Consulta_Noticias::get_noticias());
+            IFC_Func_Global::exibir_noticias(IFC_Consulta_Noticias::get_noticias());
+          ?>
           <h1 class="ver-mais">
             <a href="<?php echo get_post_type_archive_link('noticia_campus'); ?>">TODOS AS NOTICIAS
               <span class="fa fa-chevron-right"></span>

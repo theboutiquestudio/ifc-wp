@@ -22,10 +22,14 @@ class IFC_Carrossel {
 				<?php
 				global $post;
 				foreach($posts as $post){
+					switch_to_network($post->site_id);
+					switch_to_blog($post->blog_id);
 					setup_postdata($post);
 					self::mostrarPost();
 				}
 				wp_reset_postdata();
+				restore_current_blog();
+				restore_current_network();
 				?>
 			</div>
 			<div class="carrossel__next">

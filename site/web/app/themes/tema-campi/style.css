@@ -4,12 +4,12 @@ Version: 0.1
 Description: Template criado pelo IFC Câmpus Araquari.
 Author: IFC Câmpus Araquari
 Author URI: araquari.ifc.edu.br
-*/	
+*/
 
 .grid-campi{
 	display: grid;
 	grid-template-areas: "foto foto foto"
-						 "menu conteudo menu2";						 
+						 "menu conteudo menu2";
 	grid-column-gap: 3.75em;
 	grid-template-columns: 13em 1fr 17.5em;
 }
@@ -36,6 +36,7 @@ Author URI: araquari.ifc.edu.br
 						 "eventos setores";
 	grid-gap: 0.5em;
 	grid-template-columns: 1fr 1fr;
+	overflow: hidden;
 }
 .noticias{
 	grid-area: noticia;
@@ -49,7 +50,7 @@ Author URI: araquari.ifc.edu.br
 	}
 }
 .menu-campus{
-	grid-area: menu2; 
+	grid-area: menu2;
 }
 
 .menu-campus ul{
@@ -58,13 +59,13 @@ Author URI: araquari.ifc.edu.br
 }
 
 .menu-campus ul ul li{
-	border-bottom: 0.1em solid #dfdfdf; 
+	border-bottom: 0.1em solid #dfdfdf;
 	margin-bottom: 0.5em;
 	margin-top: 0.25em;
 }
 
 .menu-campus  ul ul li:last-child{
-	border-bottom: 0; 
+	border-bottom: 0;
 }
 
 .menu-campus ul ul ul{
@@ -73,13 +74,13 @@ Author URI: araquari.ifc.edu.br
 
 .menu-campus > div > ul > li > a {
   display: block;
-   
+
   padding: 0.5em 1em;
   border-top: 0.4em #549b8e solid;
   background: #e8f3f7;
   color: #549b8e;
   font-weight: bold;
-  font-size: 15px;  
+  font-size: 15px;
 }
 
 .menu-campus > div > ul > li:not(:first-child){
