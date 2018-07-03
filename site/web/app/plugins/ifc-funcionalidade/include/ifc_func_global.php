@@ -210,12 +210,15 @@ class IFC_Func_Global implements IFC_iFunc{
 	}
 
 	public static function carregar_scripts_styles(){
-		wp_enqueue_script('menu_principal' ,  plugin_dir_url(dirname(__FILE__)).'scripts/menu.js', array('jquery'));
-		wp_enqueue_style('global_style' ,  plugin_dir_url(dirname(__FILE__)).'styles/global_style.css');
-		wp_enqueue_style('menu_principal' ,  plugin_dir_url(dirname(__FILE__)).'styles/menu_principal.css');
-		wp_enqueue_style('noticias' ,  plugin_dir_url(dirname(__FILE__)).'styles/noticias.css');
-
+		wp_enqueue_script('ifc_global_menu_principal' ,  plugin_dir_url(dirname(__FILE__)).'scripts/menu.js', array('jquery'));
+		wp_enqueue_style('ifc_global_global_style' ,     plugin_dir_url(dirname(__FILE__)).'styles/global_style.css');
+		wp_enqueue_style('ifc_global_menu_principal' ,   plugin_dir_url(dirname(__FILE__)).'styles/menu_principal.css');
+		wp_enqueue_style('ifc_global_noticias' ,         plugin_dir_url(dirname(__FILE__)).'styles/noticias.css');
+		wp_enqueue_style('ifc_global_header',            plugin_dir_url(dirname(__FILE__)).'styles/header.css');
+		wp_enqueue_style('ifc_global_404',               plugin_dir_url(dirname(__FILE__)).'styles/404.css');
+		wp_enqueue_style('ifc_global_footer',            plugin_dir_url(dirname(__FILE__)).'styles/footer.css');
 	}
+
 	public static function mostrar_menu_principal(){
 		require plugin_dir_path(dirname(__FILE__)).'templates/ifc_menu_principal.php';
 	}
@@ -247,8 +250,8 @@ class IFC_Func_Global implements IFC_iFunc{
 				<div class="noticia-main">
 
 					<a href="<?php the_permalink(); ?>">
-						<?php 
-							echo wp_get_attachment_image(get_field('thumbnail'), array(120, 120)); ?>	
+						<?php
+							echo wp_get_attachment_image(get_field('thumbnail'), array(120, 120)); ?>
 					</a>
 					<div class="conteudo-noticia">
 						<a class="titulo-noticia" href="<?php the_permalink(); ?>">

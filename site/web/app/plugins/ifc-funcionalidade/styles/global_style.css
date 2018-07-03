@@ -1,24 +1,76 @@
-/* header */
-/* menu header*/
+/* CSS para os sites do Instituto Federal Catarinense (IFC)
+*
+* @project Site IFC
+* @version 1.0
+Bruno Rampi Marchioro e Wagner Esser
+* @author Yuri, Erick e Jeliel (2018).
+*
+* Cores:
+*   verde claro    : #90c74a;
+*   verde escuro   : #096318;
+*   vermelho       : #ff0000;
+*   vermelho escuro: #b94a48;
+*/
 
-.menu-menu-header-container ul{
-  list-style: none;
-  padding: 0;
-  display: flex;
-  flex-direction: row;
-  float: right;
-  font-size: 16px;
-  margin-bottom: 0;
+/* Estilos base ================================================================================= */
+body, div, p, h1, h2, h3, h4, h5, h6, a, address, li, input {
+	font-family: 'Source Sans Pro', sans-serif !important;
 }
 
-.menu-menu-header-container ul li{
-  padding-left: 1em;
+.entry-content * {
+	font-family: 'Source Sans Pro', sans-serif !important;
+	color: #444;
 }
 
+body {
+	background: #fff;
+}
 
-/*fim menu header*/
-/*Fim header*/
+@media (max-width: 992px){
+	.white-space{
+		margin-bottom: 20px;
+	}
+	.white-space-2x{
+		margin-bottom: 30px;
+	}
+}
 
+*:focus {
+	outline: thin dotted #666;
+}
+
+/* Links */
+a {
+	color: #444;
+}
+
+a:hover,
+a:focus {
+  text-decoration: none;
+  color: #b94a48;
+}
+
+.entry-content a{
+  color: blue;
+  text-decoration: underline;
+}
+
+.entry-content a:hover{
+  color: #b94a48;
+}
+
+h1 a, h2 a {
+	color: #444;
+}
+
+h3 a, h4 a, h5 a, h6 a {
+  color: #096318;
+}
+
+h1 a:hover, h2 a:hover {
+  color: #b94a48;
+}
+/*fim dos links*/
 .content-container{
   min-height: 250px;
 }
@@ -68,3 +120,138 @@
   font-size: 15px;
   font-weight: bold;
 }
+
+
+/* TODO OOOO*/
+
+#page-canvas {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+#page-content {
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: relative;
+	transition: .3s ease all;
+}
+
+#page-canvas.active #page-content {
+  left: 70%;
+}
+
+#page-canvas.active #page-content .overlay {
+  position: absolute;
+	top: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.2);
+	content: '';
+	opacity: 1;
+	transition: opacity 0.5s;
+  cursor: pointer;
+	z-index: 2000;
+	user-select: none;
+}
+
+#off-canvas-menu {
+  width: 70%;
+  left: -70%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  background: #0c8220;
+  color: #fff;
+	transform: translateX(0);
+	transition: .3s ease all;
+	overflow: auto;
+}
+
+#page-canvas.active #off-canvas-menu {
+  left: 0;
+}
+
+.toggle-off-canvas {
+  width: 100%;
+}
+
+.toggle-off-canvas a {
+  border-right: 0 !important;
+}
+
+#toggle-off-canvas {
+  display: block;
+}
+
+.off-canvas-menu-title {
+  font-size: 24px;
+  text-align: center;
+  padding: 10px 0 15px 0;
+}
+
+.off-canvas-menu > li > a {
+  display: block;
+  padding: 10px 5px;
+  color: #fff;
+  border-bottom: 1px solid #000;
+}
+
+.off-canvas-menu > li:first-child {
+  border-top: 1px solid #000;
+}
+
+.off-canvas-menu > li a:hover {
+  background-color: #555;
+}
+
+.off-canvas-sub-menu {
+	background-color: #ddd;
+}
+
+.off-canvas-sub-menu li a {
+	display: block;
+  padding: 10px 15px;
+  color: #444;
+}
+
+.off-canvas-sub-menu ul:last-child a {
+	display: block;
+  padding: 10px 15px 10px 30px;
+  color: #444;
+}
+
+.off-canvas-sub-menu li a:hover {
+  color: #fff;
+}
+/*FIM TODO*/
+
+
+/*single & pages*/
+.entry-content img {
+	background-color: #fff;
+	border: 1px solid #ddd !important;
+	border-radius: 4px;
+	display: inline-block;
+	height: auto;
+	line-height: 1.42857;
+	max-width: 100%;
+	padding: 4px;
+}
+
+.entry-content img.alignright { float: right; margin: 0 0 1em 1em; }
+.entry-content img.alignleft { float: left; margin: 0 1em 1em 0; }
+.entry-content img.aligncenter { display: block; margin-left: auto; margin-right: auto; }
+.entry-content .alignright { float: right; }
+.entry-content .alignleft { float: left; }
+.entry-content .aligncenter { display: block; margin-left: auto; margin-right: auto; }
+/* fim single & pages*/
+
+/* Página de pesquisa =========================================================================== */
+.search-results .media .media-body .media-heading {
+  font-size: 20px;
+}
+
+

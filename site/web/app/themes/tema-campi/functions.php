@@ -28,7 +28,7 @@ function get_local_noticias_site(){
 function query_noticias_mistas(){
     $id_local_noticias_site = get_local_noticias_site()->blog_id;
     $id_global_noticias_site = get_global_noticias_site()->blog_id;
-    
+
     switch_to_blog($id_local_noticias_site);
     $query_local = new WP_Query(array(
         'post_type' => 'post',
@@ -38,7 +38,7 @@ function query_noticias_mistas(){
         $post->blog_id = $id_local_noticias_site;
     }
     restore_current_blog();
-    
+
     switch_to_blog($id_global_noticias_site);
     $query_global = new WP_Query(array(
         'post_type' => 'post',
@@ -64,4 +64,3 @@ function query_noticias_mistas(){
     return $query;
 }
 
-wp_enqueue_style('estilo campi' , get_stylesheet_uri() );

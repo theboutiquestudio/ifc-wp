@@ -1,0 +1,31 @@
+	/* Tribes event calendar----------------------------------------------------------------------- */
+	/* Aumenta contraste do cabeçalho */
+.tribe-events-calendar thead th {
+	background-color: #4d4d4d !important; /* original: #666 */
+	border-left: 1px solid #4d4d4d; /* original: #666 */
+	border-right: 1px solid #4d4d4d; /* original: #666 */
+	border-top: 1px solid #4d4d4d;
+}
+
+/* Aumenta contraste dos dias do mês atual */
+.tribe-events-calendar div[id*="tribe-events-daynum-"], .tribe-events-calendar div[id*="tribe-events-daynum-"] a{
+	background-color: #5A5A5A !important; /* original: #b2b2b2 */
+}
+
+/* Aumenta contraste dos dias passados */
+.tribe-events-calendar td.tribe-events-past .tribe-events-month-event-title a, .tribe-events-calendar td.tribe-events-past .tribe-events-viewmore a{
+	opacity: 0.85 !important; /* original: 0.5 */
+}
+
+/* Aumenta contraste dos dias dos meses adjacentes */
+.tribe-events-othermonth .tribe-events-month-event-title, .tribe-events-othermonth div[id*="tribe-events-daynum-"]{
+	opacity: 0.85 !important; /* original: 0.4 */
+}
+
+.tribe-events-othermonth div[id*="tribe-events-daynum-"], .tribe-events-othermonth div[id*="tribe-events-daynum-"] a{
+	background-color: #767676 !important; /* original: #dcdcdc */
+}
+
+.tribe-events-button {
+	color: #fff !important;
+}

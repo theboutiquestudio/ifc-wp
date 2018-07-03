@@ -1,0 +1,137 @@
+header {
+	margin-bottom: 12px;
+	background: #096318;
+	border-bottom: 1px solid #dbdbdb;
+	padding: 20px 0 0px 0;
+}
+@media only screen and (max-width: 992px) {
+  header .row-single .col-left {
+    text-align: center;
+  }
+}
+
+
+.sub-banner{
+	font-size: 14px;
+	float: right;
+	margin: 0;
+	padding: 0.35em;
+	background: #124B1A;
+	margin-top: 20px
+}
+
+header a {
+	color: white;
+}
+header a:hover{
+	color: white;
+}
+
+/*Acesso as redes sociais e ao portal do amin */
+.lista-social ul{
+  display: inline-block;
+
+}
+.lista-social ul li a{
+  display: block;
+	width: 36px;
+  height: 36px;
+  text-align: center;
+}
+
+header .social li a {
+  font-size: 22px;
+  background-color: gray;
+  line-height: 36px;
+  white-space: nowrap;
+}
+
+header .social li a.facebook,
+header .social li a.youtube{
+  transition: background-color 0.5s ease;
+}
+
+header .social li a.facebook:hover{
+  background-color: #3b5998;
+
+}
+
+header .social li a.youtube:hover {
+  background-color: #b31217;
+}
+
+@media only screen and (max-width: 992px) {
+  header .lista-social{
+    width: 170px;
+    padding-right: 30px;
+    margin: 20px auto 0 auto;
+  }
+}
+
+
+header .high-contrast {
+  border-bottom: 1px dotted white;
+}
+
+header .restrict a {
+  color: gray;
+	font-size: 22px;
+}
+
+/* barra de pesquisa */
+header .pesquisa {
+  margin-bottom: 15px;
+}
+
+header .search-form {
+  width: 50%;
+}
+
+@media only screen and (max-width: 992px) {
+  header .search-form {
+    width: 100%;
+  }
+}
+header .lista-links-acessibilidade,
+header .lista-acoes {
+  display: inline-block;
+}
+
+
+
+
+header .lista-links-acessibilidade {
+  font-size: 11px;
+}
+
+header .lista-links-acessibilidade li span {
+    background: #0d6b1d;
+    color: #eee;
+    padding: 0 4px;
+}
+
+
+@media (min-width: 992px) {
+    header .lista-social {
+      float: right;
+    }
+    header .lista-acoes{
+      float: right;
+    }
+}
+/* menu header*/
+.menu-menu-header-container ul{
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  float: right;
+  font-size: 16px;
+  margin-bottom: 0;
+}
+
+.menu-menu-header-container ul li{
+  padding-left: 1em;
+}
+/*fim menu header*/
+

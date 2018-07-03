@@ -5,3 +5,231 @@ Description: Template criado pelo IFC Campus Araquari.
 Author: IFC Campus Araquari
 Author URI: araquari.ifc.edu.br
 */
+/*Ingresso*/
+.main-grid{
+  display: grid;
+  grid-template-areas: "menu-ingresso menu-perfil menu-perfil menu-perfil"
+                        "menu noticia noticia acesso-rapido"
+                        "menu avisos agenda eventos"
+                        "menu redesocial redesocialb setores";
+  grid-template-columns: 14em 1fr 1fr 17.5em;
+  grid-template-rows: 210px auto auto auto;
+  grid-gap: 3.75em;
+}
+@media screen  and (max-width:  990px){
+  .main-grid{
+    grid-template-areas: "menu-ingresso" "menu-perfil" "noticia" "acesso-rapido"  "avisos" "agenda" "eventos" "redessociais" "setores";
+    grid-template-columns: 1fr;
+    grid-row-gap: 1em;
+    grid-template-rows: auto;
+  }
+}
+
+.menu-ingresso{
+  display: grid;
+  grid-area: menu-ingresso;
+  grid-template-columns: 1fr;
+  grid-gap: 0.5em;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 990px) {
+  .menu-ingresso  {
+    grid-template-columns: 50% 50%;
+  }
+}
+.menu-ingresso li a {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  height: 100%;
+  background-color: #d3efbd;
+  border-top: 0.45em solid #9dbc82;
+  color: #00500f;
+}
+.menu-ingresso li a:hover{
+  background-color: #f0f7e8;
+  border-top: 0.45em solid #dbebcc;
+  transition: background .3s;
+}
+.menu-ingresso li{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+}
+.ingresso-menu-texto{
+  font-size: 20px;
+  line-height: 1;
+  padding-left: 0.5em;
+}
+.destaque_ingresso:last-child {
+    margin-bottom: 0;
+}
+
+.bloco_destaque_ingresso a:hover{
+  color: inherit;
+}
+
+a:hover .destaque_ingresso{
+  opacity: 0.6;
+}
+/* Fim ingresso */
+/* portais de acesso por perfil*/
+
+.menu-acesso-perfil{
+  grid-area: menu-perfil;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1.5%;
+  justify-content: space-between;
+}
+.menu-acesso-perfil a {
+  display: grid;
+  font-size: 2em;
+  line-height: 1.1;
+  color: white !important;
+  text-align: center;
+  justify-content: center;
+  align-items: flex-end;
+  background-size: cover;
+  background-position: center;
+}
+
+@media screen and (max-width: 990px){
+  .menu-acesso-perfil{
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .menu-acesso-perfil a{
+    background-image: none !important;
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+
+  }
+}
+
+.ingressante{
+    background-color: rgba(104, 195, 213, 0.4);
+    background-blend-mode: color-burn;
+}
+
+.ingressante:hover{
+  background-color: rgba(104, 195, 213, 0.9);
+  transition: background 0.3s;
+  background-blend-mode: color-burn;
+}
+
+.aluno{
+  background-color: rgba(245, 203, 92, 0.4);
+  background-blend-mode: luminosity;
+}
+
+.aluno:hover{
+  background-color: rgba(245, 203, 92, 0.7);
+  transition: background 0.3s;
+}
+
+.servidor{
+  background-color: rgba(41, 155, 122, 0.4);
+  background-blend-mode: luminosity;
+}
+
+.servidor:hover{
+  background-color: rgba(41, 155, 122, 0.8);
+  transition: background 0.3s;
+}
+
+.comunidade{
+  background-color: rgba(139, 38, 53, 0.4);
+  background-blend-mode: color-burn;
+}
+
+.comunidade:hover{
+  background-color: rgba(139, 38, 53, 0.6);
+  transition: background 0.3s;
+}
+
+.ingressante, .aluno, .servidor, .comunidade{
+  max-height: 100%;
+  max-width: 100%;
+  background-size: cover;
+  font-weight: bold;
+}
+@media screen and (max-width: 990px){
+  .ingressante{
+    background-color: #68c3d5;
+  }
+  .aluno{
+    background-color: #f5cb5c;
+  }
+  .servidor{
+    background-color: #299b7a;
+  }
+  .comunidade{
+    background-color:  #8b2635;
+  }
+
+}
+/* fim portal de acesso por perfil*/
+
+/* Notícia Index */
+.noticia-index{
+  grid-area: noticia;
+  grid-column: span 2;
+}
+/* Fim Noticia Index */
+
+/* Avisos */
+.avisos{
+  grid-area: avisos;
+}
+/* Fim avisos */
+/* Agenda */
+.agenda{
+  grid-area: agenda;
+}
+/* Fim Agenda */
+/* Eventos */
+.eventos{
+  grid-area: eventos;
+}
+/* Fim eventos */
+/*redes socias*/
+.rede-social{
+  grid-area: redesocial;
+}
+
+.rede-social2{
+  grid-area: redesocialb;
+}
+.null-instagram-feed img{
+  width: 100%;
+}
+.instagram-pics{
+  list-style: none;
+  padding: 0;
+}
+
+/*fim redes sociais*/
+
+/* setores*/
+.setores{
+  grid-area: setores;
+}
+
+.setores ul{
+	list-style: none;
+	padding-left: 0.25em;
+}
+/* Fim setores*/

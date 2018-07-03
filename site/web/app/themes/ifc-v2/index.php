@@ -64,14 +64,6 @@
   <!-- Fim menu acesso rapido -->
 
 
-<!-- COURSES & BANNER
-<aside role="complementary">
-<div class="col-md-4 col-courses-banner">
-<?php # require("sidebar.php"); ?>
-</div>
-</aside>
-/COURSES -->
-
 
 <!-- local acesso rapido se der erro -->
 <!-- Avisos  -->
@@ -226,5 +218,5 @@
            } ?>
             </p>
           </section>
-        </div><!-- /.row-news-courses -->
+        </div>
         <?php get_footer() ?>
