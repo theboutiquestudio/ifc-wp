@@ -12,7 +12,10 @@ class IFC_Func_Site_Geral implements IFC_iFunc{
 		add_action('init', array(__CLASS__, 'registrar_custom_fields'));
 		add_action('wp_enqueue_scripts', array(__CLASS__, 'carregar_styles'));
 
+		IFC_Carrossel::registrar();
+
 		add_image_size('perfil', 420, 420);
+
 
 		if (is_admin()){
 			$this->restaurar_menu_links();

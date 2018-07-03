@@ -1,0 +1,29 @@
+.carrossel__siema img {
+	width: 100%;
+	height: auto;
+}
+
+.carrossel {
+	position: relative;
+}
+
+.carrossel__prev, .carrossel__next {
+	position: absolute;
+	top: 50%;
+}
+
+.carrossel__prev {
+	left: 0;
+	z-index: 1;
+}
+
+.carrossel__next{
+	right: 0;
+}
+
+.carrossel .dashicons {
+	width: auto;
+	height: auto;
+	font-size: 50px;
+	color: #fff;
+}
