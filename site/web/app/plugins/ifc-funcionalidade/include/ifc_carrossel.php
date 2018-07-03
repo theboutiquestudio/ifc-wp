@@ -47,8 +47,6 @@ class IFC_Carrossel {
 			<a class="texto-noticia" href="<?php the_permalink(); ?>">
 				<?php IFC_Func_Global::echo_post_excerpt(55); ?>
 			</a>
-
-			?>
 		</div>
 		<?php
 	}
