@@ -30,8 +30,7 @@
 		<div class="row row-single">
 			<div class="col-xs-12 col-sm-12 col-md-6 col-left">
 				<a href="<?php bloginfo('url'); ?>">
-					<img class="logo-normal" alt="Logotipo do IFC" src="<?php echo get_theme_file_uri( 'assets/images/logo-ifc-alto-contraste.png' ); ?>">
-
+					<img class="logo-normal" alt="Logotipo do IFC" src="<?= plugins_url('images/logo-ifc.png', dirname(__FILE__)) ?>">
 				</a>
 			</div><!-- /.col-left -->
 
