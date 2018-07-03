@@ -63,4 +63,10 @@ function query_noticias_mistas(){
 
     return $query;
 }
+add_action('init', 'carregar_estilo');
+
+function carregar_estilo(){
+	wp_enqueue_style('estilo campi' , get_stylesheet_uri());
+}
+
 
