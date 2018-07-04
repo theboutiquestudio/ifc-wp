@@ -41,6 +41,7 @@ class IFC_Carrossel {
 	}
 
 	private static function mostrarPost(){
+		global $post;
 		?>
 		<div>
 			<a href="<?php the_permalink(); ?>">
