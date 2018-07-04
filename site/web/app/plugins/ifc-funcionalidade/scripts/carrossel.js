@@ -14,8 +14,8 @@ jQuery(function (){
 		selector: '.carrossel__siema',
 		loop: true,
 	});
-	document.querySelector('.carrossel__prev').addEventListener('click', () => mySiema.prev());
-	document.querySelector('.carrossel__next').addEventListener('click', () => mySiema.next());
+	document.querySelectorAll('.carrossel__prev').forEach(x => x.addEventListener('click', () => mySiema.prev()));
+	document.querySelectorAll('.carrossel__next').forEach(x => x.addEventListener('click', () => mySiema.next()));
 
 	jQuery('.carrossel').keydown(function (event) {
 		keyboardHandler(mySiema, event);

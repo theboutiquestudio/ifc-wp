@@ -16,9 +16,6 @@ class IFC_Carrossel {
 	public static function mostrar($posts) {
 		?>
 		<div class="carrossel" tabindex="0">
-			<a class="carrossel__prev">
-				<span class="dashicons dashicons-arrow-left-alt2"></span>
-			</a>
 			<div class="carrossel__siema">
 				<?php
 				global $post;
@@ -33,9 +30,6 @@ class IFC_Carrossel {
 				restore_current_network();
 				?>
 			</div>
-			<a class="carrossel__next">
-				<span class="dashicons dashicons-arrow-right-alt2"></span>
-			</a>
 		</div>
 		<?php
 	}
@@ -43,13 +37,21 @@ class IFC_Carrossel {
 	private static function mostrarPost(){
 		?>
 		<div>
-			<a href="<?php the_permalink(); ?>">
-				<?= wp_get_attachment_image(get_field('thumbnail'), 'full'); ?>
-			</a>
-			<a class="titulo-noticia" href="<?php the_permalink(); ?>">
+			<div class="carrossel__slide">
+				<a class="carrossel__prev">
+					<span class="dashicons dashicons-arrow-left-alt2"></span>
+				</a>
+				<a class="carrossel__imagem" href="<?php the_permalink(); ?>">
+					<?= wp_get_attachment_image(get_field('thumbnail'), 'full'); ?>
+				</a>
+				<a class="carrossel__next">
+					<span class="dashicons dashicons-arrow-right-alt2"></span>
+				</a>
+			</div>
+			<a class="carrossel__titulo" href="<?php the_permalink(); ?>">
 				<?php the_title(); ?>
 			</a>
-			<a class="texto-noticia" href="<?php the_permalink(); ?>">
+			<a class="carrossel__texto" href="<?php the_permalink(); ?>">
 				<?php IFC_Func_Global::echo_post_excerpt(33); ?>
 			</a>
 		</div>
