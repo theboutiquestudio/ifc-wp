@@ -7,9 +7,15 @@
 	position: relative;
 }
 
+.carrossel a{
+	display: inline-block;
+	font-size: 18px;
+}
+
 .carrossel__prev, .carrossel__next {
 	position: absolute;
 	top: 50%;
+	/*bottom: 0;*/
 }
 
 .carrossel__prev {
@@ -19,6 +25,14 @@
 
 .carrossel__next{
 	right: 0;
+}
+
+.carrossel__prev:hover,
+.carrossel__next:hover{
+	display: block;
+	background-color: rgba(128, 128, 128 , 0.6);
+	transition: background 0.3s;
+	border-radius: 0.3em;
 }
 
 .carrossel .dashicons {

@@ -16,9 +16,9 @@ class IFC_Carrossel {
 	public static function mostrar($posts) {
 		?>
 		<div class="carrossel" tabindex="0">
-			<div class="carrossel__prev">
+			<a class="carrossel__prev">
 				<span class="dashicons dashicons-arrow-left-alt2"></span>
-			</div>
+			</a>
 			<div class="carrossel__siema">
 				<?php
 				global $post;
@@ -33,15 +33,14 @@ class IFC_Carrossel {
 				restore_current_network();
 				?>
 			</div>
-			<div class="carrossel__next">
+			<a class="carrossel__next">
 				<span class="dashicons dashicons-arrow-right-alt2"></span>
-			</div>
+			</a>
 		</div>
 		<?php
 	}
 
 	private static function mostrarPost(){
-		global $post;
 		?>
 		<div>
 			<a href="<?php the_permalink(); ?>">
@@ -51,7 +50,7 @@ class IFC_Carrossel {
 				<?php the_title(); ?>
 			</a>
 			<a class="texto-noticia" href="<?php the_permalink(); ?>">
-				<?php IFC_Func_Global::echo_post_excerpt(55); ?>
+				<?php IFC_Func_Global::echo_post_excerpt(33); ?>
 			</a>
 		</div>
 		<?php

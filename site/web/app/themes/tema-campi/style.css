@@ -36,10 +36,10 @@ Author URI: araquari.ifc.edu.br
 						 "eventos setores";
 	grid-gap: 0.5em;
 	grid-template-columns: 1fr 1fr;
-	overflow: hidden;
 }
 .noticias{
 	grid-area: noticia;
+	overflow: hidden;
 }
 
 
