@@ -7,6 +7,7 @@ class IFC_Carrossel {
 	}
 
 	public static function _carregar_scripts_e_styles() {
+		wp_enqueue_style('dashicons');
 		wp_enqueue_script('ifc_siema_carousel', plugin_dir_url(dirname(__FILE__)) . '/vendor/siema-1.5.1/dist/siema.min.js');
 		wp_enqueue_script('ifc_carrossel', plugin_dir_url(dirname(__FILE__)) . '/scripts/carrossel.js', array('jquery'));
 		wp_enqueue_style('ifc_carrossel', plugin_dir_url(dirname(__FILE__)) . '/styles/carrossel.css');
