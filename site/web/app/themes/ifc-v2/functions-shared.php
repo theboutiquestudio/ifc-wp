@@ -2,10 +2,10 @@
 require 'vendor/autoload.php';
 
 function carregar_scripts_e_styles() {
-	// wp_enqueue_script(
-	// 	'ifc_cookies',
-	// 	get_template_directory_uri() . '/components/cookies-js/dist/cookies.min.js'
-	// );
+	wp_enqueue_script(
+		'ifc_cookies',
+		get_template_directory_uri() . '/components/cookies-js/dist/cookies.min.js'
+	);
 	wp_enqueue_script(
 		'ifc_jquery',
 		get_template_directory_uri() . '/components/jquery/dist/jquery.js'
@@ -23,7 +23,7 @@ function carregar_scripts_e_styles() {
 	wp_enqueue_script(
 		'ifc_main',
 		get_template_directory_uri() . '/assets/javascripts/main.js',
-		array('ifc_jquery')
+		array('ifc_jquery', 'ifc_cookies')
 	);
 }
 

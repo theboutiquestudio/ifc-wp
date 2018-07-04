@@ -1,8 +1,20 @@
 // High Contrast ===================================================================================
 (function(){
   'use strict';
-  
-  var high_contrast_action = document.getElementById('high-contrast-action');
+
+  jQuery(function() {
+    var high_contrast_action = document.getElementById('high-contrast-action');
+        loadPreferredState();
+
+    high_contrast_action.addEventListener('click', function() {
+      if (parseInt(Cookies.get('contrast-state'), {domain: '.ifc.edu.br'}) == 0) {
+        toggleContrast(1);
+      } else {
+        toggleContrast(0);
+      }
+    });
+  });
+
   var high_contrast_rules  = '\
     * { background-color: #000 !important; color: #fff !important; } \
     p a { color: #FFFF00 !important; } \
@@ -27,7 +39,7 @@
     .menu ul li {border-top: 0.4em #999 solid; } \
     .menu .title {border-top: 0.4em #666666 solid; }\
   ';
-  
+
   function loadPreferredState() {
     var state = Cookies.get('contrast-state', {domain: '.ifc.edu.br'});
     if(typeof state === 'undefined' || state === ''){
@@ -36,14 +48,14 @@
     }
     toggleContrast(state);
   }
-  
-  function toggleContrast(state) {    
+
+  function toggleContrast(state) {
     if (state == 1) {
       if (!document.getElementById('high-contrast-style')) {
         var body          = document.getElementsByTagName('body')[0];
         var style_div     = document.createElement('style');
         var style_content = document.createTextNode(high_contrast_rules);
-        
+
         style_div.id = 'high-contrast-style';
         style_div.appendChild(style_content);
         document.head.appendChild(style_div);
@@ -57,24 +69,12 @@
       }
     }
   }
-  
-  document.addEventListener('DOMContentLoaded', function() {
-    loadPreferredState();
-    
-    high_contrast_action.addEventListener('click', function() {
-      if (parseInt(Cookies.get('contrast-state'), {domain: '.ifc.edu.br'}) == 0) {
-        toggleContrast(1);
-      } else {
-        toggleContrast(0);
-      }
-    });
-  });
 })();
 
 // Off Canvas Menu =================================================================================
 (function(){
   'use strict';
-  
+
   function toggleOffCanvas() {
     if ($('#page-canvas').hasClass('active')) {
       // Do things on Nav Close
@@ -86,23 +86,23 @@
       $('#page-content').append('<div class="overlay"></div>');
     }
   }
-  
+
   $(function() {
     $('#toggle-off-canvas').click(function(e) {
       e.preventDefault();
       toggleOffCanvas();
     });
-    
+
     $('#page-content').on('click', '.overlay', function(e) {
       e.preventDefault();
       toggleOffCanvas();
     });
-    
+
     $('#page-canvas').on('swipe', '.overlay', function(e) {
       e.preventDefault();
       toggleOffCanvas();
     });
-    
+
     $(window).on('scroll', function(e) {
       if ($(window).scrollTop() > 300) {
         $('.nav-mobile').addClass("fix-top");
@@ -344,7 +344,7 @@
 // Magnific Popup ==================================================================================
 (function(){
   'use strict';
-  
+
   $(function() {
     $('.entry-content a[href*=".jpg"], .entry-content a[href*=".jpeg"], .entry-content a[href*=".png"], .entry-content a[href*=".gif"]').each(function(){
       if ($(this).parents('.gallery').length == 0) {
@@ -354,7 +354,7 @@
         });
       }
     });
-    
+
     $('.gallery').each(function() {
       $(this).magnificPopup({
         delegate: 'a',
@@ -368,20 +368,20 @@
 // Modal ===========================================================================================
 (function(){
   'use strict';
-    
+
   $(function() {
     $('.modal-activate').click(function(e) {
       e.preventDefault();
-      
+
       $(this).next('.modal-dialog').addClass('active');
       $('.modal-overlay').addClass('active');
     });
-    
+
     $('.modal-overlay').click(function() {
       $('.modal-dialog').removeClass('active');
       $('.modal-overlay').removeClass('active');
     });
-    
+
     $('.modal-dialog-close').click(function(e) {
       e.preventDefault();
       $('.modal-dialog').removeClass('active');
@@ -400,12 +400,12 @@
 // Main Menu ========================================================================================
 (function(){
   'use strict';
-  
+
   $(function() {
     $('#accordion-off-canvas').on('click', '.collapsible', function(e) {
       $(this).find('i').toggleClass('fa-rotate-90');
     });
-    
+
     $('#accordion-side-menu').on('click', '.collapsible', function(e) {
       $(this).find('i').toggleClass('fa-rotate-90');
     });
