@@ -2,24 +2,28 @@
 require 'vendor/autoload.php';
 
 function carregar_scripts_e_styles() {
+	// wp_enqueue_script(
+	// 	'ifc_cookies',
+	// 	get_template_directory_uri() . '/components/cookies-js/dist/cookies.min.js'
+	// );
 	wp_enqueue_script(
-		'ifc_cookies',
-		get_template_directory_uri() . '/components/cookies-js/dist/cookies.min.js'
+		'ifc_jquery',
+		get_template_directory_uri() . '/components/jquery/dist/jquery.js'
 	);
 	wp_enqueue_script(
 		'ifc_bootstrap',
 		get_template_directory_uri() . '/components/bootstrap/dist/js/bootstrap.min.js',
-		array('jquery')
+		array('ifc_jquery')
 	);
 	wp_enqueue_script(
 		'ifc_magnific_popup',
 		get_template_directory_uri() . '/components/magnific-popup/dist/jquery.magnific-popup.min.js',
-		array('jquery')
+		array('ifc_jquery')
 	);
 	wp_enqueue_script(
 		'ifc_main',
 		get_template_directory_uri() . '/assets/javascripts/main.js',
-		array('jquery')
+		array('ifc_jquery')
 	);
 }
 
