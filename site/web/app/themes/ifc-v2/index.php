@@ -49,7 +49,7 @@
   </a>
 
   <?php
-    IFC_Carrossel::mostrar(IFC_Consulta_Noticias::get_noticias());
+    IFC_Carrossel::mostrar(IFC_Consulta_Noticias::get_noticias(5, true));
     IFC_Func_Global::exibir_noticias(IFC_Consulta_Noticias::get_noticias());
   ?>
   <h1 class="ver-mais">
