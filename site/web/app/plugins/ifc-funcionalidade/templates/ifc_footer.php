@@ -45,7 +45,7 @@
 						}
 						restore_current_blog();
 					?>
-				</div><
+				</div>
 
 			</div>
 		</div>
