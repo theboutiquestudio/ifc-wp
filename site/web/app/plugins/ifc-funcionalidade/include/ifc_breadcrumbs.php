@@ -27,6 +27,9 @@ class IFC_Breadcrumbs {
 			echo self::get_link_campus();
 			echo $separador;
 			echo self::get_link_curso();
+		} else {
+			echo $separador;
+			echo get_option('blogname');
 		}
 
 		if (is_single()){
