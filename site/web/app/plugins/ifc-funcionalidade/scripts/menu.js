@@ -32,7 +32,7 @@ function toggleSubMenuOnClick(event) {
 }
 
 function toggleSubMenu(subMenu){
-  jQuery(subMenu).toggle();
+  jQuery(subMenu).toggle(200);
 }
 
 jQuery(function() {

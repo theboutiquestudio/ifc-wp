@@ -5,7 +5,7 @@
 }
 
 .menu-principal{
-	grid-area: menu; 
+	grid-area: menu;
 }
 
 .menu-principal ul{
@@ -14,13 +14,13 @@
 }
 
 .menu-principal ul ul li{
-	border-bottom: 0.1em solid #dfdfdf; 
+	border-bottom: 0.1em solid #dfdfdf;
 	margin-bottom: 0.5em;
 	margin-top: 0.25em;
 }
 
 .menu-principal  ul ul li:last-child{
-	border-bottom: 0; 
+	border-bottom: 0;
 }
 
 .menu-principal ul ul ul{
@@ -35,6 +35,7 @@
   color: #124B1A;
   font-weight: bold;
   font-size: 15px;
+  cursor: pointer;
 }
 
 .menu-principal > div > ul > li:not(:first-child){
