@@ -11,7 +11,7 @@ class IFC_Func_Global implements IFC_iFunc{
 
 		add_filter('wp_title', array(__CLASS__, '_alterar_titulo_da_pagina'));
 		add_action('init', array(__CLASS__, 'registrar_menus'));
-		$this->registrar_tamanhos_de_thumbnail();
+		$this->registrar_tamanhos_de_imagem();
 
 		add_action('wp_enqueue_scripts', array(__CLASS__, 'carregar_scripts_styles'));
 
@@ -62,9 +62,10 @@ class IFC_Func_Global implements IFC_iFunc{
 		}
 	}
 
-	public function registrar_tamanhos_de_thumbnail(){
-		add_image_size('large-thumb', 240, 170, true);
-		add_image_size('small-thumb', 120, 90, true);
+	public function registrar_tamanhos_de_imagem(){
+		add_image_size('noticia_thumbnail', 120, 120, true);
+		add_image_size('noticia_carrossel', 9999, 500, false);
+		add_image_size('banner', 1170, 210);
 	}
 
 	public static function echo_post_excerpt($limite){
@@ -251,7 +252,7 @@ class IFC_Func_Global implements IFC_iFunc{
 
 					<a href="<?php the_permalink(); ?>">
 						<?php
-							echo wp_get_attachment_image(get_field('thumbnail'), array(120, 120)); ?>
+							echo wp_get_attachment_image(get_field('thumbnail'), 'noticia_thumbnail'); ?>
 					</a>
 					<div class="conteudo-noticia">
 						<a class="titulo-noticia" href="<?php the_permalink(); ?>">

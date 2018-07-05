@@ -16,9 +16,6 @@ class IFC_Func_Site_Campus implements IFC_iFunc{
 
 		IFC_Carrossel::registrar();
 
-		add_image_size('banner', 1170, 210);
-
-
 		if(is_admin()){
 			add_action('admin_enqueue_scripts', array(__CLASS__, 'carregar_scripts_admin'));
 			add_action('admin_init', array(__CLASS__, 'registrar_opcoes_campi'));

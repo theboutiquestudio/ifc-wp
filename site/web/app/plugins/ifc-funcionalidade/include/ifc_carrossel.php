@@ -45,7 +45,7 @@ class IFC_Carrossel {
 				</a>
 				<?php endif; ?>
 				<a class="carrossel__imagem" href="<?php the_permalink(); ?>">
-					<?= wp_get_attachment_image(get_field('thumbnail'), 'full'); ?>
+					<?= wp_get_attachment_image(get_field('thumbnail'), 'noticia_carrossel'); ?>
 				</a>
 				<?php if ($navegacao): ?>
 				<a class="carrossel__next">

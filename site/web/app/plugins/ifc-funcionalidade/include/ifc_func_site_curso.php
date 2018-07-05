@@ -10,8 +10,6 @@ class IFC_Func_Site_Curso implements IFC_iFunc{
 		add_action('init', array(__CLASS__, 'registrar_custom_post_types'));
 		add_action('init', array(__CLASS__, 'registrar_menus'));
 		add_action('init', array(__CLASS__, 'registrar_custom_fields'));
-		add_image_size('banner', 1170, 210);
-
 
 		if(is_admin()){
 			add_action('admin_enqueue_scripts', array(__CLASS__, 'carregar_scripts_admin'));
