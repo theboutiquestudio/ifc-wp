@@ -205,7 +205,7 @@
                 <span class="fa fa-clipboard"></span> Setores
               </a>
             </h1>
-           <?php $consulta =  IFC_Consulta_Setores::get_setores_da_network(get_network()->id);
+           <?php $consulta =  IFC_Consulta_Setores::get_setores_da_network(get_network()->id, 5);
 
            foreach ($consulta as $setores) {
              ?>
